@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'NeueMachina-Bold';
+    font-display: swap;
+    src: url(../fonts/NeueMachina-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'AzeretMono-Regular';
+    font-display: swap;
+    src: url(../fonts/AzeretMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'AzeretMono-SemiBold';
+    font-display: swap;
+    src: url(../fonts/AzeretMono-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: '';
+    font-display: swap;
+    src: url(../fonts/);
+}
+
+@font-face {
+    font-family: '';
+    font-display: swap;
+    src: url(../fonts/);
+}
+
+@font-face {
+    font-family: '';
+    font-display: swap;
+    src: url(../fonts/);
+}
+
+@font-face {
+    font-family: '';
+    font-display: swap;
+    src: url(../fonts/);
+}
+
+@font-face {
+    font-family: '';
+    font-display: swap;
+    src: url(../fonts/);
+}
+
+@font-face {
+    font-family: '';
+    font-display: swap;
+    src: url(../fonts/);
+}
+
+:root {
+    --color0: #000;
+    --color1: #fff;
+    --color2: #131313;
+    --color3: #;
+    --color4: #;
+    --color5: #;
+    --color6: #;
+    --color7: #;
+    --color8: #;
+    --color9: #;
+    --color10: #;
+
+    --fonte-padrão: 'Arial, Verdana, Helvetica, sans-serif';
+    --font1: 'NeueMachina-Bold';
+    --font2: 'AzeretMono-Regular';
+    --font3: 'AzeretMono-SemiBold';
+    --font4: '';
+    --font5: '';
+    --font6: '';
+    --font7: '';
+    --font8: '';
+    --font8: '';
+    --font10: '';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+/*Edit style of slider dots
+
+.w-slider-dot {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    transition: width 0.2s, background-color 0.2s;
+    transition-timing-function: linear;
+}
+
+.w-slider-dot.w-active {
+    width: 24px !important;
+    height: 6px !important;
+    border-radius: 6px !important;
+    background: #D4FE00 !important;
+    transition: width 0.2s, background-color 0.2s;
+    transition-timing-function: linear;
+}
+
+.w-slider-nav-invert>div {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 6px !important;
+    background: #C4CED1 !important;
+    transition: width 0.2s, background-color 0.2s;
+    transition-timing-function: linear;
+}
+
+.w-slider-nav-invert>div.w-active {
+    width: 24px !important;
+    height: 6px !important;
+    border-radius: 6px !important;
+    background: #D4FE00 !important;
+    transition: width 0.2s, background-color 0.2s;
+    transition-timing-function: linear;
+}*/
