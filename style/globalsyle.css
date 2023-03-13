@@ -96,13 +96,17 @@ html {
     scroll-behavior: smooth;
 }
 
+/* img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+} */
+
 ul li {
     list-style: none;
 }
 
 body {
     width: 100%;
-    /* max-width: 1440px; */
     /* max-width: 1440px; */
     margin: auto;
     background-color: var(--color2);
@@ -112,32 +116,22 @@ body {
     font-weight: 400;
 }
 
+.header {
+    overflow: hidden;
+}
+
 .header .container1 {
     /* position: relative; */
     margin: auto;
     width: 100%;
-    max-width: 76rem;
-    /* padding-top: 7.6875rem;
-    padding-bottom: 7.6875rem;
-    padding-right: 2.5rem;
-    padding-left: 2.5rem; */
+    /* max-width: 76rem; */
+    max-width: 81rem;
     padding: 7.6875rem 2.5rem;
 }
 
 .header .container1 .container2 {
     width: 100%;
     display: flex;
-    /* flex-direction: column;
-    max-width: 33.875rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start; */
 }
 
 .header .container1 .container2 .leftcontainer {
@@ -145,15 +139,8 @@ body {
     max-width: 33.875rem;
     display: flex;
     flex-direction: column;
-    /* -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start; */
     align-items: flex-start;
+    margin-right: 1rem;
 }
 
 .header .container1 .container2 .leftcontainer .figmaislogo {
@@ -179,9 +166,9 @@ body {
     /* font-weight: 700; */
     /* width: 100%;
     max-width: 33.875rem; */
-    opacity: 1;
+    /* opacity: 1;
     transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; */
 }
 
 .header .container1 .container2 .leftcontainer h1 span {
@@ -194,9 +181,9 @@ body {
     font-size: 1.25rem;
     line-height: 1.4;
     /* font-weight: 400; */
-    opacity: 1;
+    /* opacity: 1;
     transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; */
 }
 
 .header .container1 .container2 .leftcontainer p span {
@@ -209,9 +196,9 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
-    opacity: 1;
+    /* opacity: 1;
     transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; */
 }
 
 .header .container1 .container2 .leftcontainer .button a {
@@ -251,18 +238,12 @@ body {
 .header .container1 .container2 .rightcontainer {
     position: relative;
     width: 100%;
-    width: 100%;
-    /* max-width: 33.875rem; */
-    max-width: 66.125rem;
 }
 
 .header .container1 .container2 .rightcontainer .firstelement {
     position: absolute;
-    /* left: 7.3rem; */
-    /* left: 4.8rem; */
-    left: 4rem;
-    /* top: 23.8rem; */
-    top: 20.5rem;
+    left: 6.25rem;
+    top: 23.75rem;
     right: 0rem;
     bottom: auto;
     z-index: 3;
@@ -271,16 +252,20 @@ body {
     box-shadow: 0 2px 2.5px 0 rgb(0 0 0 / 25%);
 }
 
-.header .container1 .container2 .rightcontainer .firstelement:hover {
-    transform: translateY(5px);
+.header .container1 .container2 .rightcontainer .firstelement:hover,
+.header .container1 .container2 .rightcontainer .secondelement:hover {
+    transform: translate3d(0px, 1rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    opacity: 1;
+    transform-style: preserve-3d;
+    transition: all 500ms ease;
 }
 
 .header .container1 .container2 .rightcontainer .herothiago {
     position: absolute;
     left: auto;
     top: -8.8rem;
-    /* right: 0%; */
-    right: 2.6%;
+    right: 0%;
+    /* right: 2.6%; */
     bottom: auto;
     width: 100%;
     max-width: 41rem;
@@ -288,13 +273,13 @@ body {
 
 .header .container1 .container2 .rightcontainer .light {
     position: absolute;
-    left: 21.6rem;
-    top: -7.3rem;
+    /* left: 18rem; */
+    left: 20.6rem;
+    top: -6.3rem;
     right: 0%;
     bottom: 0%;
     width: 100%;
     max-width: 61.31rem;
-    overflow: hidden;
 }
 
 .header .container1 .container2 .rightcontainer .secondelement {
@@ -309,6 +294,45 @@ body {
     box-shadow: 0 3px 3.39px 0 rgb(0 0 0 / 25%);
 }
 
+.wordsmoving {
+    margin-top: -0.0378rem;
+    padding: 2.625rem 0rem;
+    background-color: var(--color3);
+    display: flex;
+    overflow: hidden;
+}
+
+.wordsmoving ul {
+    display: flex;
+}
+
+.wordsmoving ul li {
+    font-family: var(--font1);
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--color0);
+    text-transform: uppercase;
+    margin: 0rem 3.25rem;
+    width: 100%;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slide-track {
+    animation: scroll 20s linear infinite;
+    /* display: flex; */
+}
+
+@media (max-width: 991px) {}
 
 
 
