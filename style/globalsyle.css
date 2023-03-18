@@ -31,15 +31,15 @@
 }
 
 @font-face {
-    font-family: '';
+    font-family: 'AzeretMono-Medium';
     font-display: swap;
-    src: url(../fonts/);
+    src: url(../fonts/AzeretMono-Medium.ttf);
 }
 
 @font-face {
-    font-family: '';
+    font-family: 'AzeretMono-Light';
     font-display: swap;
-    src: url(../fonts/);
+    src: url(../fonts/AzeretMono-Light.ttf);
 }
 
 @font-face {
@@ -73,8 +73,8 @@
     --font3: 'AzeretMono-SemiBold';
     --font4: 'NeueMachina-Light';
     --font5: 'NeueMachina-Ultralight';
-    --font6: '';
-    --font7: '';
+    --font6: 'AzeretMono-Medium';
+    --font7: 'AzeretMono-Light';
     --font8: '';
     --font8: '';
     --font10: '';
@@ -144,8 +144,6 @@ body {
 }
 
 .header .container1 .container2 .leftcontainer .figmaislogo {
-    /* width: auto;
-    max-width: 16.4375rem; */
     width: 237px;
     height: 42px;
     opacity: 1;
@@ -202,11 +200,9 @@ body {
 }
 
 .header .container1 .container2 .leftcontainer .button a {
-    font-family: var(--font3);
-    font-size: 1.25rem;
+    font: 600 1.25rem/1 var(--font3);
     color: var(--color0);
     text-transform: uppercase;
-    line-height: 1;
     letter-spacing: 1px;
     display: flex;
     justify-content: center;
@@ -219,8 +215,8 @@ body {
 }
 
 .header .container1 .container2 .leftcontainer .button a:hover {
-    box-shadow: 0 4px 25px 0 #d5ff40;
-    color: #000;
+    box-shadow: 0 4px 25px 0 var(--color3);
+    color: var(--color0);
 }
 
 .header .container1 .container2 .leftcontainer .button .kiwifylogo {
@@ -396,10 +392,140 @@ body {
     animation: scrollimages 25s linear infinite;
 }
 
+.leaveps .container5 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    /* padding: 7.6875rem 2.5rem; */
+    padding: 0rem 2.5rem;
+}
 
+.leaveps .container5 .container6 {
+    display: flex;
+    column-gap: 5rem;
+}
 
+.leaveps .container5 .container6 .leftcontainer {
+    width: 100%;
+    max-width: 33.9785rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: -51px;
+    grid-row-gap: 4.5rem;
+    padding: 1rem 0rem;
+}
 
+.leaveps .container5 .container6 .leftcontainer img.robot {
+    position: static;
+    width: 100%;
+    max-width: 42.875rem;
+    margin-bottom: 0rem;
+    box-shadow: 0 4px 29px 0 rgba(0, 0, 0, 0.25);
+}
 
+.leaveps .container5 .container6 .leftcontainer img.secondlight {
+    position: absolute;
+    left: -18.7rem;
+    top: -15.8rem;
+    z-index: -1;
+    width: 61.125rem;
+    max-width: none;
+}
+
+.leaveps .container5 .container6 .leftcontainer .info {
+    display: flex;
+    align-items: flex-start;
+    grid-column-gap: 4.625rem;
+}
+
+.leaveps .container5 .container6 .leftcontainer .info .students {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row-gap: 3px;
+}
+
+.leaveps .container5 .container6 .leftcontainer .info .students .studentsnumber {
+    width: 11.1875rem;
+}
+
+.leaveps .container5 .container6 .leftcontainer .info .students .studentsphoto {
+    width: 7.625rem;
+    max-width: 100%;
+}
+
+.leaveps .container5 .container6 .leftcontainer .info .assessments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row-gap: 0.6875rem;
+}
+
+.leaveps .container5 .container6 .leftcontainer .info .assessments .onehundred {
+    width: 11.1875rem;
+}
+
+.leaveps .container5 .container6 .leftcontainer .info .assessments .stars {
+    width: 7.625rem;
+    max-width: 100%;
+}
+
+.leaveps .container5 .container6 .rightcontainer {
+    width: 100%;
+    max-width: 28.9375rem;
+}
+
+.leaveps .container5 .container6 .rightcontainer h2 {
+    font: 500 1.625rem/1.4 var(--font6);
+    color: var(--color3);
+}
+
+.leaveps .container5 .container6 .rightcontainer p {
+    font: 300 1rem/1.6 var(--font7);
+    position: static;
+    margin: 1.25rem 0rem 3rem 0rem;
+}
+
+.leaveps .container5 .container6 .rightcontainer .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column-gap: 2px;
+}
+
+.leaveps .container5 .container6 .rightcontainer .button a {
+    font: 600 1.125rem/1 var(--font3);
+    color: var(--color0);
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 3.75rem;
+    border-radius: 8rem;
+    background-color: var(--color3);
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.leaveps .container5 .container6 .rightcontainer .button a:hover {
+    box-shadow: 0 4px 25px 0 var(--color3);
+    color: var(--color0);
+}
+
+.leaveps .container5 .container6 .rightcontainer .button .kiwifylogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.leaveps .container5 .container6 .rightcontainer .button .kiwifylogo span {
+    font-family: var(--font3);
+    font-size: 0.625rem;
+}
 
 
 
