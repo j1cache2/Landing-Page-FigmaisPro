@@ -43,9 +43,9 @@
 }
 
 @font-face {
-    font-family: '';
+    font-family: 'AzeretMono-Regular';
     font-display: swap;
-    src: url(../fonts/);
+    src: url(../fonts/AzeretMono-Regular.ttf);
 }
 
 @font-face {
@@ -75,9 +75,14 @@
     --font5: 'NeueMachina-Ultralight';
     --font6: 'AzeretMono-Medium';
     --font7: 'AzeretMono-Light';
-    --font8: '';
-    --font8: '';
+    --font8: 'AzeretMono-Regular';
+    --font9: '';
     --font10: '';
+    --font11: '';
+    --font12: '';
+    --font3: '';
+    --font14: '';
+    --font15: '';
 }
 
 * {
@@ -713,6 +718,154 @@ body {
     /* animation: scrollmodules 70s linear infinite; */
     animation: scrollmodules 80s linear infinite;
 }
+
+.figmaispro {
+    position: relative;
+}
+
+.figmaispro .container13 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    /* padding: 9.375rem 2.5rem 7.6875rem 2.5rem; */
+    padding: 9.375rem 2.5rem 0rem 2.5rem;
+}
+
+.figmaispro .container13 .container14 {
+    display: flex;
+    align-items: center;
+    grid-column-gap: 6rem;
+    justify-content: space-between;
+}
+
+.figmaispro .container13 .container14 .leftcontainer {
+    position: relative;
+    width: 45%;
+    max-width: 35rem;
+}
+
+.figmaispro .container13 .container14 .leftcontainer h2 {
+    font: 700 5.375rem/1.2 var(--font1);
+    /* margin-top: 0rem;
+    margin-bottom: 0rem; */
+    margin: 0rem auto 2rem;
+}
+
+.figmaispro .container13 .container14 .leftcontainer h2 span {
+    color: var(--color3);
+}
+
+.figmaispro .container13 .container14 .leftcontainer p {
+    font: 400 1.25rem/1.4 var(--font8);
+}
+
+.figmaispro .container13 .container14 .leftcontainer img {
+    position: absolute;
+    left: -0.4rem;
+    top: auto;
+    right: auto;
+    bottom: 9.4rem;
+    display: block;
+    width: 13.375rem;
+}
+
+.figmaispro .container13 .container14 .rightcontainer {
+    position: relative;
+    left: 19px;
+    width: 48.1875rem;
+    max-width: none;
+}
+
+.figmaispro .container13 .container14 .rightcontainer img.thiagobg {
+    width: auto;
+    max-width: 34.8125rem;
+}
+
+.figmaispro .container13 .container14 .rightcontainer img.resourcesimg {
+    position: absolute;
+    left: -17%;
+    top: 64px;
+    right: auto;
+    bottom: 0%;
+    width: 10.5rem;
+    border-radius: 20px;
+    box-shadow: 0 3px 13.55px 0 rgba(0, 0, 0, 0.45);
+
+    /* will-change: transform;
+    transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d; */
+}
+
+.figmaispro .container13 .container14 .rightcontainer img.classesimg {
+    position: absolute;
+    left: -10%;
+    top: 165px;
+    right: auto;
+    bottom: 0%;
+    width: 8.5625rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.45);
+}
+
+.figmaispro .container13 .container14 .rightcontainer img.modulesimg {
+    position: absolute;
+    left: -14%;
+    top: auto;
+    right: auto;
+    bottom: 18%;
+    width: 9.75rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.45);
+}
+
+.figmaispro .container13 .container14 .rightcontainer img.updatesimg {
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: -1%;
+    bottom: 38%;
+    width: 11.75rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.45);
+}
+
+.figmaispro .container13 .container14 .rightcontainer img.studentsimg {
+    position: absolute;
+    left: 411px;
+    bottom: 237.125px;
+    width: 12.0625rem;
+    max-width: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.45);
+}
+
+.figmaispro .container13 .container14 .rightcontainer img.elementsimg {
+    position: absolute;
+    left: 0%;
+    top: -13%;
+    right: 0%;
+    bottom: auto;
+    width: 34.875rem;
+}
+
+.figmaispro img.lightimg {
+    position: absolute;
+    /* left: -47.7rem;
+    top: -18.1rem; */
+    z-index: -1;
+    left: -66.7rem;
+    top: -21.1rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
