@@ -346,10 +346,6 @@ body {
     width: 45%;
     max-width: 30.4375rem;
     margin: 0rem auto 0rem;
-    /* margin-top: 0rem;
-    margin-bottom: 0rem; */
-    /* padding-top: 2rem;
-    padding-bottom: 2rem; */
     padding: 2rem 0rem;
 }
 
@@ -536,9 +532,11 @@ body {
 
 .public .container7 .container8 {
     display: flex;
+    justify-content: space-between;
     padding-right: 2.5rem;
     padding-left: 2.5rem;
     align-items: center;
+    gap: 2rem;
 }
 
 .public .container7 .container8 h2 {
@@ -546,10 +544,9 @@ body {
     color: var(--color3);
     width: 43%;
     max-width: 30.625rem;
-    margin: 0rem auto;
 }
 
-.public .container7 .container8 .containertext {
+/* .public .container7 .container8 .containertext {
     display: grid;
     align-items: flex-start;
     grid-auto-columns: 1fr;
@@ -557,11 +554,16 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto minmax(auto, 1fr) auto auto auto auto;
     width: 100%;
-    max-width: 27.6875rem;
+    max-width: 33.125rem;
     min-width: auto;
     padding-left: 0rem;
     grid-row-gap: 0rem;
     justify-content: center;
+} */
+
+.public .container7 .container8 .containertext {
+    width: 100%;
+    max-width: 33.125rem;
 }
 
 .public .container7 .container8 .containertext .content {
@@ -588,7 +590,6 @@ body {
     border-width: 1px;
     border-color: #000 #000 #000 #8b8b8b;
     overflow: hidden;
-
 }
 
 .public .container7 .container8 .containertext .content .block p {
@@ -601,8 +602,8 @@ body {
     content: "";
     position: absolute;
     left: -28px;
-    left: -4px;
-    width: 4px;
+    left: -5px;
+    width: 5px;
     height: -webkit-fill-available;
     background-color: var(--color3);
 }
@@ -617,9 +618,101 @@ body {
     color: var(--color3);
 }
 
+.learn .container9 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    padding: 9.375rem 2.5rem 0rem 2.5rem;
+}
 
+.learn .container9 .container10 {
+    display: flex;
+    align-items: center;
+    grid-column-gap: 8.25rem;
+}
 
+.learn .container9 .container10 .leftcontainer {
+    position: relative;
+    left: -58px;
+    width: 100%;
+    max-width: 43.8125rem;
+}
 
+.learn .container9 .container10 .leftcontainer .macbook {
+    width: 100%;
+    max-width: 43.8125rem;
+}
+
+.learn .container9 .container10 .leftcontainer .light {
+    position: absolute;
+    left: -18.6rem;
+    top: -10.3rem;
+    right: auto;
+    bottom: -20px;
+    z-index: -1;
+    width: 61.125rem;
+    max-width: none;
+}
+
+.learn .container9 .container10 .rightcontainer {
+    width: 100%;
+    max-width: 26.0625rem;
+}
+
+.learn .container9 .container10 .rightcontainer h2 {
+    font: 700 4rem/1.2 var(--font1);
+    color: var(--color3);
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+}
+
+.learn .container9 .container10 .rightcontainer p {
+    font: 300 1rem/1.6 var(--font7);
+    position: static;
+}
+
+.modules {
+    overflow: hidden;
+}
+
+.modules .container11 {
+    margin: auto;
+    width: 100%;
+    /* max-width: 81rem; */
+    /* padding: 9.375rem 2.5rem 7.6875rem 2.5rem; */
+    padding: 9.375rem 2.5rem 12.5rem 2.5rem;
+}
+
+.modules .container11 .container12 h2 {
+    font: 700 4rem/1.2 var(--font1);
+    text-align: center;
+    color: var(--color3);
+    margin-bottom: 4rem;
+}
+
+.modules .container11 .container12 .images {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    align-items: center;
+    grid-column-gap: 2rem;
+}
+
+@keyframes scrollmodules {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-10000px);
+    }
+}
+
+.modules .container11 .container12 .images img {
+    width: 100%;
+    max-width: 17.125rem;
+    /* animation: scrollmodules 70s linear infinite; */
+    animation: scrollmodules 80s linear infinite;
+}
 
 
 
@@ -632,6 +725,8 @@ body {
 
 
 @media (max-width: 991px) {}
+
+@media (max-width: 767px) {}
 
 
 
