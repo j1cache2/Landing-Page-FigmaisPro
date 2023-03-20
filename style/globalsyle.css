@@ -80,7 +80,7 @@
     --font10: '';
     --font11: '';
     --font12: '';
-    --font3: '';
+    --font13: '';
     --font14: '';
     --font15: '';
 }
@@ -296,7 +296,10 @@ body {
 }
 
 .wordsmoving {
-    margin-top: -0.0378rem;
+    width: 100%;
+    max-width: 81rem;
+    margin: -0.0378rem auto 0rem;
+    /* margin-top: -0.0378rem; */
     padding: 2.625rem 0rem;
     background-color: var(--color3);
     display: flex;
@@ -676,9 +679,9 @@ body {
     position: static;
 }
 
-.modules {
+/* .modules {
     overflow: hidden;
-}
+} */
 
 .modules .container11 {
     margin: auto;
@@ -696,6 +699,10 @@ body {
 }
 
 .modules .container11 .container12 .images {
+    width: 100%;
+    max-width: 81rem;
+    overflow: hidden;
+    margin: auto;
     display: flex;
     /* flex-wrap: nowrap; */
     align-items: center;
@@ -846,6 +853,8 @@ body {
     right: 0%;
     bottom: auto;
     width: 34.875rem;
+    /* top: -3.5rem;
+    transform: translateY(3rem); */
 }
 
 .figmaispro img.lightimg {
