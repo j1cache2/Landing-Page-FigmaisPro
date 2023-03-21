@@ -866,6 +866,57 @@ body {
     top: -21.1rem;
 }
 
+.welcometofigmaispro .container15 {
+    margin: auto;
+    width: 100%;
+    /* max-width: 81rem; */
+    /* padding: 9.375rem 2.5rem 7.6875rem 2.5rem; */
+    /* padding: 9.375rem 2.5rem 12.5rem 2.5rem; */
+    padding: 9.375rem 0rem 12.5rem 0rem;
+}
+
+.welcometofigmaispro .container15 .container16 h2 {
+    font: 700 4rem/1.2 var(--font1);
+    text-align: center;
+}
+
+.welcometofigmaispro .container15 .container16 img.logo {
+    width: 18.3125rem;
+    margin: 1.5rem auto 5rem;
+    display: block;
+}
+
+.welcometofigmaispro .container15 .container16 .images {
+    width: 100%;
+    max-width: 81rem;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    align-items: center;
+    grid-column-gap: 2rem;
+}
+
+@keyframes scrollwelcometo {
+    0% {
+        transform: translateX(-10710px);
+    }
+
+    100% {
+        transform: translateX(1100px);
+    }
+}
+
+.welcometofigmaispro .container15 .container16 .images img {
+    width: 100%;
+    max-width: 17.125rem;
+    animation: scrollwelcometo 110s linear infinite;
+}
+
+
+
+
+
 
 
 
