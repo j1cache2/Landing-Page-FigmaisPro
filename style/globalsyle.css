@@ -297,7 +297,7 @@ body {
 
 .wordsmoving {
     width: 100%;
-    max-width: 81rem;
+    /* max-width: 81rem; */
     margin: -0.0378rem auto 0rem;
     /* margin-top: -0.0378rem; */
     padding: 2.625rem 0rem;
@@ -688,7 +688,8 @@ body {
     width: 100%;
     /* max-width: 81rem; */
     /* padding: 9.375rem 2.5rem 7.6875rem 2.5rem; */
-    padding: 9.375rem 2.5rem 12.5rem 2.5rem;
+    /* padding: 9.375rem 2.5rem 12.5rem 2.5rem; */
+    padding: 9.375rem 0rem 12.5rem 0rem;
 }
 
 .modules .container11 .container12 h2 {
@@ -700,7 +701,7 @@ body {
 
 .modules .container11 .container12 .images {
     width: 100%;
-    max-width: 81rem;
+    /* max-width: 81rem; */
     overflow: hidden;
     margin: auto;
     display: flex;
@@ -888,7 +889,7 @@ body {
 
 .welcometofigmaispro .container15 .container16 .images {
     width: 100%;
-    max-width: 81rem;
+    /* max-width: 81rem; */
     overflow: hidden;
     margin: auto;
     display: flex;
@@ -913,7 +914,21 @@ body {
     animation: scrollwelcometo 110s linear infinite;
 }
 
+.webflowelementor .container17 {
+    /* background-image: url(../images/webflowlogobg.svg); */
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    /* padding: 9.375rem 2.5rem 7.6875rem 2.5rem; */
+    padding: 0rem 2.5rem 9.375rem 2.5rem;
+}
 
+.webflowelementor .container17 .container18 img.webflowbg {
+    /* position: absolute; */
+    margin-top: -0.25rem;
+    width: 100%;
+    max-width: 80.625rem;
+}
 
 
 
