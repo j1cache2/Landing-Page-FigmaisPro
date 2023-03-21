@@ -915,12 +915,16 @@ body {
 }
 
 .webflowelementor .container17 {
-    /* background-image: url(../images/webflowlogobg.svg); */
     margin: auto;
     width: 100%;
     max-width: 81rem;
-    /* padding: 9.375rem 2.5rem 7.6875rem 2.5rem; */
-    padding: 0rem 2.5rem 9.375rem 2.5rem;
+    /* padding: 0rem 2.5rem 9.375rem 2.5rem; */
+    padding: 0rem 2.5rem;
+}
+
+.webflowelementor .container17 .container18 {
+    display: flex;
+    flex-direction: column;
 }
 
 .webflowelementor .container17 .container18 img.webflowbg {
@@ -930,8 +934,118 @@ body {
     max-width: 80.625rem;
 }
 
+.webflowelementor .container17 .container18 .logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* max-width: 40.6875rem; */
+    /* margin: -15rem auto 1rem; */
+    max-width: 46rem;
+    margin: -15.5rem auto 1rem;
+}
 
+.webflowelementor .container17 .container18 .logos img {
+    margin: auto;
+    position: relative;
+    /* top: -45px; */
+    /* width: 15.75rem; */
+}
 
+.webflowelementor .container17 .container18 .logos img.webflowlogo {
+    /* margin-left: 1rem; */
+    margin-left: 2.5rem;
+}
+
+.webflowelementor .container17 .container18 p {
+    font: 300 1rem/1.6 var(--font7);
+    color: var(--color3);
+    text-align: center;
+    width: 100%;
+    max-width: 34.9375rem;
+    margin: auto;
+}
+
+.comments {
+    /* overflow: hidden; */
+}
+
+.comments .container19 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    /* padding: 9.375rem 2.5rem 9.375rem 2.5rem; */
+    padding: 18.750rem 2.5rem 9.375rem 2.5rem;
+    /* padding: 0rem 2.5rem; */
+}
+
+.comments .container19 .container20 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* overflow: scroll; */
+}
+
+.comments .container19 .container20 h2 {
+    font: 700 3rem/1.2 var(--font1);
+    color: var(--color3);
+    text-align: center;
+    width: 100%;
+    max-width: 41.6875rem;
+    margin-bottom: 4rem;
+}
+
+.comments .container19 .container20 .slides,
+.comments .container19 .container20 .slides .slidesgroup {
+    display: flex;
+}
+
+.comments .container19 .container20 .slides .slidesgroup .slide {
+    width: 100%;
+    margin: 0rem 1rem 5rem 1rem;
+}
+
+.comments .container19 .container20 .slides .slidesgroup .slide .content {
+    display: flex;
+    width: 100%;
+}
+
+.comments .container19 .container20 .slides .slidesgroup .slide .content img.person {
+    width: 3.75rem;
+}
+
+.comments .container19 .container20 .slides .slidesgroup .slide .content .headerandstars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem 0rem;
+    margin-left: 0.9375rem;
+}
+
+.comments .container19 .container20 .slides .slidesgroup .slide .content .headerandstars h3 {
+    font: 600 1rem/1 var(--font3);
+    width: max-content;
+}
+
+.comments .container19 .container20 .slides .slidesgroup .slide .content .headerandstars img.stars {
+    width: 8rem;
+}
+
+.comments .container19 .container20 .slides .slidesgroup .slide p {
+    font: 300 0.875rem/1.5 var(--font7);
+    /* display: block; */
+    margin-top: 1.5rem;
+    /* white-space: normal; */
+    /* white-space: nowrap; */
+    /* word-wrap: break-word; */
+    width: 100%;
+    max-width: 28.375rem;
+}
+
+.comments .container19 .container20 .slidenavigation {
+    width: 100%;
+}
 
 
 
