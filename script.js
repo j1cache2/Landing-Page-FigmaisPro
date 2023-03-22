@@ -139,38 +139,117 @@
 
 // 6092
 
-// Selecione o elemento que deseja mover
-const elemento = document.querySelector('.elementsimg');
+// // Selecione o elemento que deseja mover
+// const elemento = document.querySelector('.elementsimg');
 
-// Defina as constantes para os valores de início e fim do evento
+// // Defina as constantes para os valores de início e fim do evento
+// // const inicioEvento = 5000;
+// // const fimEvento = 6000;
 // const inicioEvento = 5000;
 // const fimEvento = 6000;
-const inicioEvento = 5000;
-const fimEvento = 6000;
 
-// Adicione um listener ao evento de rolagem da página
-window.addEventListener('scroll', () => {
-    // Obtenha a quantidade de rolagem atual da página em pixels
-    const scrollTop = window.pageYOffset;
+// // Adicione um listener ao evento de rolagem da página
+// window.addEventListener('scroll', () => {
+//     // Obtenha a quantidade de rolagem atual da página em pixels
+//     const scrollTop = window.pageYOffset;
 
-    // Verifique se a quantidade de rolagem está dentro do intervalo do evento
-    if (scrollTop >= inicioEvento && scrollTop <= fimEvento) {
-        // Calcule a distância em pixels do topo do evento até a posição atual de rolagem
-        const distanciaEvento = scrollTop - inicioEvento;
+//     // Verifique se a quantidade de rolagem está dentro do intervalo do evento
+//     if (scrollTop >= inicioEvento && scrollTop <= fimEvento) {
+//         // Calcule a distância em pixels do topo do evento até a posição atual de rolagem
+//         const distanciaEvento = scrollTop - inicioEvento;
 
-        // Calcule a quantidade de deslocamento vertical que deseja aplicar
-        const deslocamentoRem = Math.min(4, distanciaEvento / 250);
+//         // Calcule a quantidade de deslocamento vertical que deseja aplicar
+//         const deslocamentoRem = Math.min(4, distanciaEvento / 250);
 
-        // Determine a direção da rolagem da página
-        const direcaoRolagem = scrollTop > window._ultimaPosicaoScrollTop ? 'paraCima' : 'paraBaixo';
-        window._ultimaPosicaoScrollTop = scrollTop;
+//         // Determine a direção da rolagem da página
+//         const direcaoRolagem = scrollTop > window._ultimaPosicaoScrollTop ? 'paraCima' : 'paraBaixo';
+//         window._ultimaPosicaoScrollTop = scrollTop;
 
-        // Inverta a direção da rolagem se o elemento estiver fora do eixo X da tela
-        const { top, bottom } = elemento.getBoundingClientRect();
-        const estaForaDoEixoX = top > 0 || bottom < window.innerHeight;
-        const direcaoMovimento = estaForaDoEixoX ? (direcaoRolagem === 'paraCima' ? 'paraBaixo' : 'paraCima') : direcaoRolagem;
+//         // Inverta a direção da rolagem se o elemento estiver fora do eixo X da tela
+//         const { top, bottom } = elemento.getBoundingClientRect();
+//         const estaForaDoEixoX = top > 0 || bottom < window.innerHeight;
+//         const direcaoMovimento = estaForaDoEixoX ? (direcaoRolagem === 'paraCima' ? 'paraBaixo' : 'paraCima') : direcaoRolagem;
 
-        // Aplique o deslocamento vertical ao elemento
-        elemento.style.transform = `translateY(${deslocamentoRem * (direcaoMovimento === 'paraCima' ? -1 : 1)}rem)`;
-    }
+//         // Aplique o deslocamento vertical ao elemento
+//         elemento.style.transform = `translateY(${deslocamentoRem * (direcaoMovimento === 'paraCima' ? -1 : 1)}rem)`;
+//     }
+// });
+
+// document.addEventListener('DOMContentLoaded', function () {
+
+//     document.querySelector('slidenavigation').onsubmit = function () {
+//         // fetch('https://api.exchangeratesapi.io/latest?base=USD')
+//         fetch('https://v6.exchangerate-api.com/v6/c906f905a0e38d2e6b3e862a/latest/USD')
+//             .then(response => response.json())
+//             .then(data => {
+//                 // console.log(conversion_rates);
+//                 const currency = document.querySelector('#currency').value.toUpperCase();
+//                 const rate = data.conversion_rates[currency];
+//                 if (rate !== undefined) {
+//                     document.querySelector('#result').innerHTML = `1 USD is equal to ${rate} ${currency}.`;
+//                 } else {
+//                     document.querySelector('#result').innerHTML = 'Invalid currency.';
+//                 }
+//             })
+//             .catch(error => {
+//                 console.log('Error:', error);
+//             });
+
+//         return false;
+//     }
+// });
+
+// var navigatorR = document.getElementById("navigator");
+
+// var spans = document.querySelectorAll(".slidenavigator .span");
+// var spans = document.getElementsByClassName(".slidenavigator .span");
+// var spans = document.getElementsByClassName(".slidenavigator .span");
+
+// var spans = document.querySelectorAll(".slidenavigator > span");
+
+// const slides = document.querySelectorAll("slidesgroup");
+// const numberp = document.querySelector(".percentage");
+
+
+// span.forEach(span => {
+//     span.addEventListener("click", () => {
+//         span.classList.toggle("active");
+//     });
+// });
+
+// document.querySelectorAll('li.dot').forEach(li => {
+//     li.addEventListener('click', () => {
+//         document.querySelectorAll('li.dot').forEach(li => {
+//             li.classList.remove('active');
+//         });
+//         li.classList.add('active');
+//     });
+// });
+
+let spans = document.querySelectorAll("span");
+
+spans.forEach(span => {
+    span.addEventListener('click', () => {
+        document.querySelectorAll('span').forEach(span => {
+            span.classList.remove('active');
+        });
+        span.classList.add('active');
+    });
 });
+
+function slide(id) {
+    let slideB = document.getElementById(id);
+    let spanB = document.getElementById(id);
+    
+    spanB.onclick.sty
+
+    // const slideB = button.classList.contains("active");
+
+    if (slideB = button.classList.contains("active")) {
+        slideB.style.visibility = "hidden";
+        spanB.classList.toggle('active');
+    } else {
+        slideB.style.visibility = "visible";
+        spanB.classList.toggle('active');
+    }
+};

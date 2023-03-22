@@ -59,7 +59,7 @@
     --color1: #fff;
     --color2: #131313;
     --color3: #d5ff40;
-    --color4: #;
+    --color4: #D4FE00;
     --color5: #;
     --color6: #;
     --color7: #;
@@ -975,16 +975,18 @@ body {
     width: 100%;
     max-width: 81rem;
     /* padding: 9.375rem 2.5rem 9.375rem 2.5rem; */
-    padding: 18.750rem 2.5rem 9.375rem 2.5rem;
-    /* padding: 0rem 2.5rem; */
+    /* padding: 18.750rem 2.5rem 9.375rem 2.5rem; */
+    padding: 18.750rem 2.5rem 0rem 2.5rem;
 }
 
 .comments .container19 .container20 {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; */
     /* overflow: scroll; */
+    width: 100%;
+    margin: auto;
 }
 
 .comments .container19 .container20 h2 {
@@ -993,16 +995,30 @@ body {
     text-align: center;
     width: 100%;
     max-width: 41.6875rem;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
+    margin: 0rem auto 4rem;
 }
 
-.comments .container19 .container20 .slides,
+.comments .container19 .container20 .slides {
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+}
+
 .comments .container19 .container20 .slides .slidesgroup {
     display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.comments .container19 .container20 .slides .slidesgroup.active {
+    position: absolute;
+    left: 0rem;
 }
 
 .comments .container19 .container20 .slides .slidesgroup .slide {
-    width: 100%;
+    /* width: 100%; */
+    width: max-content;
     margin: 0rem 1rem 5rem 1rem;
 }
 
@@ -1044,10 +1060,29 @@ body {
 }
 
 .comments .container19 .container20 .slidenavigation {
-    width: 100%;
+    width: 78px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
+.comments .container19 .container20 .slidenavigation span {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: var(--color1);
+    transition: width 0.2s, background-color 0.2s;
+    transition-timing-function: linear;
+    margin: 0px 3px;
+    cursor: pointer;
+}
 
+.comments .container19 .container20 .slidenavigation span.active {
+    width: 24px;
+    background-color: var(--color4);
+}
 
 
 

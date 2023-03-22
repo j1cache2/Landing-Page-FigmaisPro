@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>FigmaisPRO</title>
     <link rel="stylesheet" href="style/globalsyle.css">
-    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -346,7 +346,7 @@
 
                 <div class="slides">
 
-                    <div class="slidesgroup">
+                    <div class="slidesgroup" id="1">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/comments01.webp" class="person" alt="Fernanda Vieira">
@@ -374,7 +374,7 @@
                         </div>
                     </div>
 
-                    <div class="slidesgroup">
+                    <div class="slidesgroup" id="2">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/comments03.webp" class="person" alt="Fernando Abele">
@@ -406,7 +406,7 @@
                         </div>
                     </div>
 
-                    <div class="slidesgroup">
+                    <div class="slidesgroup" id="3">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/comments05.webp" class="person" alt="Ricardo Lunge">
@@ -468,7 +468,7 @@
                         </div>
                     </div>
 
-                    <slides class="group">
+                    <div class="slidesgroup">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/commentsdefault.webp" class="person" alt="Bianca Afonso">
@@ -493,18 +493,17 @@
                                 curso sobre ferramentas, é realmente uma experiência completa
                                 para atuar no mercado de trabalho. Sensacional!</p>
                         </div>
-                    </slides>
-                </div>
-                <div class="slidenavigation">
-                    <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 1 of 4" aria-pressed="false"
-                        role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
-                    <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 2 of 4"
-                        aria-pressed="true" role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;">
                     </div>
-                    <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 3 of 4" aria-pressed="false"
-                        role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
-                    <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 4 of 4" aria-pressed="false"
-                        role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
+                </div>
+                <div class="slidenavigation" id="navigator">
+                    
+                    <span class="active" id="1" onclick="slide(1)"></span>
+                    <span id="2" onclick="slide(2)"></span>
+                    <!-- <span class="active" class="span"></span>
+                    <span class="span"></span> -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
