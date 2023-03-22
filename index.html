@@ -236,7 +236,7 @@
     </section>
 
     <!-- <section class="figmaispro" onscroll="myFunction()"> -->
-    <section class="figmaispro" id="1">
+    <section class="figmaispro">
         <div class="container13">
             <div class="container14">
                 <div class="leftcontainer">
@@ -259,7 +259,7 @@
 
                     <img src="images/studentsimg.webp" class="studentsimg" alt="Alunos">
 
-                    <img src="images/elementsimg.svg" class="elementsimg" alt="Ferramentas do Figma" id="2">
+                    <img src="images/elementsimg.svg" class="elementsimg" alt="Ferramentas do Figma">
                     <!-- <div class="_07_image-mobile"><img
                             src="https://uploads-ssl.webflow.com/6400d48bab6c0b29ce83a0c3/6400d48bab6c0bb4ab83a150_thiago-elements.webp"
                             loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, 100vw"
@@ -344,9 +344,9 @@
             <div class="container20">
                 <h2>O que os alunos dizem sobre o Figmais:</h2>
 
-                <div class="slides">
+                <div class="slides" id="slidescontainer">
 
-                    <div class="slidesgroup" id="1">
+                    <div class="slidesgroup active" id="slide1">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/comments01.webp" class="person" alt="Fernanda Vieira">
@@ -374,7 +374,7 @@
                         </div>
                     </div>
 
-                    <div class="slidesgroup" id="2">
+                    <div class="slidesgroup" id="slide2">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/comments03.webp" class="person" alt="Fernando Abele">
@@ -406,7 +406,7 @@
                         </div>
                     </div>
 
-                    <div class="slidesgroup" id="3">
+                    <div class="slidesgroup" id="slide3">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/comments05.webp" class="person" alt="Ricardo Lunge">
@@ -440,7 +440,7 @@
                         </div>
                     </div>
 
-                    <div class="slidesgroup">
+                    <div class="slidesgroup" id="slide4">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/comments07.webp" class="person" alt="Daniel Motart">
@@ -468,7 +468,7 @@
                         </div>
                     </div>
 
-                    <div class="slidesgroup">
+                    <div class="slidesgroup" id="slide5">
                         <div class="slide">
                             <div class="content">
                                 <img src="images/commentsdefault.webp" class="person" alt="Bianca Afonso">
@@ -496,14 +496,16 @@
                     </div>
                 </div>
                 <div class="slidenavigation" id="navigator">
-                    
-                    <span class="active" id="1" onclick="slide(1)"></span>
-                    <span id="2" onclick="slide(2)"></span>
-                    <!-- <span class="active" class="span"></span>
-                    <span class="span"></span> -->
-                    <span></span>
-                    <span></span>
-                    <span></span>
+
+                    <!-- <span class="active" id="1" onclick="slide(1)"></span>
+                    <span id="2" onclick="slide(2)"></span> -->
+                    <!-- <span class="active" id="1" onclick="slideTranslate(1)"></span> -->
+                    <span class="active" onclick='allFunctions("slide", 1)'></span>
+                    <!-- <span id="2" onclick="slideTranslate(2)"></span> -->
+                    <span onclick='allFunctions("slide", 2)'></span>
+                    <span onclick='allFunctions("slide", 3)'></span>
+                    <span onclick='allFunctions("slide", 4)'></span>
+                    <span onclick='allFunctions("slide", 5)'></span>
                 </div>
             </div>
         </div>

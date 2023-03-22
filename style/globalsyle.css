@@ -982,8 +982,8 @@ body {
 .comments .container19 .container20 {
     /* display: flex;
     flex-direction: column;
-    align-items: center;
-    overflow: hidden; */
+    align-items: center; */
+    overflow: hidden;
     /* overflow: scroll; */
     width: 100%;
     margin: auto;
@@ -1002,19 +1002,48 @@ body {
 .comments .container19 .container20 .slides {
     margin: auto;
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
+
+/* .comments .container19 .container20 .slides:active {
+    transform: translateX(-100%);
+} */
+
+/* @keyframes scrollcomments {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-4820px);
+    }
+} */
 
 .comments .container19 .container20 .slides .slidesgroup {
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    /* animation: scrollcomments 10s linear infinite; */
+    /* transform: translateX(100%); */
 }
 
 .comments .container19 .container20 .slides .slidesgroup.active {
+    transform: translateX(-100%);
+    transition-duration: 1s;
+}
+
+.comments .container19 .container20 .slides .slidesgroup#slide1 {
+    transform: translateX(0%);
+}
+
+
+
+
+
+/* .comments .container19 .container20 .slides .slidesgroup.active {
     position: absolute;
     left: 0rem;
-}
+} */
 
 .comments .container19 .container20 .slides .slidesgroup .slide {
     /* width: 100%; */

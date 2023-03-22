@@ -226,7 +226,18 @@
 //     });
 // });
 
-let spans = document.querySelectorAll("span");
+// let spans = document.querySelectorAll("span");
+
+// spans.forEach(span => {
+//     span.addEventListener('click', () => {
+//         document.querySelectorAll('span').forEach(span => {
+//             span.classList.remove('active');
+//         });
+//         span.classList.add('active');
+//     });
+// });
+
+let spans = document.querySelectorAll(".slidenavigation span");
 
 spans.forEach(span => {
     span.addEventListener('click', () => {
@@ -237,19 +248,128 @@ spans.forEach(span => {
     });
 });
 
-function slide(id) {
-    let slideB = document.getElementById(id);
-    let spanB = document.getElementById(id);
-    
-    spanB.onclick.sty
+// let slides = document.querySelector("slidesgroup");
+// let spanBtn = document.getElementById("firstspan");
 
+// function slideTranslate() {
+//     // document.getElementById("slidescontainer").style.transform = "translateX(-972px)";
+//     document.getElementsByClassName("slidesgroup").style.transform = "translateX(-972px)";
+// }
+
+// function slideTranslate(id) {
+//     let slideB = document.getElementById(id);
+//     let spanB = document.getElementById(id);
+
+//     slideB.style.transform = "translateX(-972px)";
+// };
+
+// function slideTranslate(id) {
+//     let slideB = document.getElementById(id);
+//     let activeSpan = document.getElementById
+
+//     slideB.classList.add('active');
+// }
+
+
+//Funciona, porém altera todos os grupos ao mesmo tempo
+// function slideTranslate() {
+//     let slideB = document.querySelectorAll(".slidesgroup");
+//     slideB.forEach(slide => slide.classList.add('active'));
+// }
+
+
+function slideTranslate() {
+    let allSlide = document.querySelectorAll(".slidesgroup"); // use dot notation to select by class
+    allSlide.forEach(slide => slide.classList.add('active')); // use forEach to loop over selected elements
+}
+
+
+// function getActiveIndex() {
+//     const slides = document.querySelectorAll(".slidescontainer");
+//     const activeSlide = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
+//     return activeSlide;
+// }
+
+// const activeIndex = getActiveIndex();
+
+// console.log(activeIndex);
+
+function allFunctions() {
+    slideTranslate();
+    // getActiveSpanIndex();
+    transformSlide();
+}
+
+// function getActiveSpanIndex() {
+//     const spans = document.querySelectorAll(".slidenavigation span");
+//     const activeSpan = Array.from(spans).findIndex(span => span.classList.contains("active"));
+//     return activeSpan;
+// }
+// const activeSpan = getActiveSpanIndex();
+
+// console.log(activeSpan);
+
+
+
+// function getIndiceAtivo() {
+//     const slides = document.querySelectorAll(".slidesgroup");
+//     const indiceAtivo = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
+//     return indiceAtivo;
+// }
+
+// const indiceAtivo = getIndiceAtivo();
+
+// spanBtn.forEach(span => {
+//     span.addEventListener('click', () => {
+//         document.querySelectorAll('span').forEach(span => {
+//             span.classList.remove('active');
+//             // document.querySelector("slidesgroup").style.transform = "translate(-972px)";
+//         })
+//     }
+// function translateFunction() {
+//     document.getElementById("theDiv").style.transform = "translateX(100px)";
+//     document.getElementById("theDiv").style.transition = " all 2s"
+// }
+
+let slideActive;
+let number;
+
+function transformSlide(_string, number) {
+    let counterSlide = 1;
+    // let slideActive = document.getElementById(number);
+    let slideActive = number;
+    // let resultOperation = slideActive - counterSlide;
+    // counterSlide = counterSlide + resultOperation;
+    return slideActive;
+
+    // slidesecond.style.transform = 'translateX(' + (-sizes * counter) + 'px)';
+
+
+    // let spanB = document.getElementById(id);
+    // spanB.onclick.sty
     // const slideB = button.classList.contains("active");
-
-    if (slideB = button.classList.contains("active")) {
-        slideB.style.visibility = "hidden";
-        spanB.classList.toggle('active');
-    } else {
-        slideB.style.visibility = "visible";
-        spanB.classList.toggle('active');
-    }
+    // if (slideB = button.classList.contains("active")) {
+    //     slideB.style.visibility = "hidden";
+    //     spanB.classList.toggle('active');
+    // } else {
+    //     slideB.style.visibility = "visible";
+    //     spanB.classList.toggle('active');
+    // }
 };
+
+console.log(slideActive);
+
+// function showImage(id) {
+//     var image = document.getElementById(id);
+//     var btn = document.getElementById("btn" + id);
+//     var circle = document.getElementById("circle" + id);
+//     if (image.style.visibility === "visible") {
+//         image.style.visibility = "hidden";
+//         btn.classList.toggle('active');
+//         circle.classList.toggle('active');
+//     } else {
+//         image.style.visibility = "visible";
+//         btn.classList.toggle('active');
+//         circle.classList.toggle('active');
+//     }
+// };
