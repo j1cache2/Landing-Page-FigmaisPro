@@ -278,14 +278,14 @@ spans.forEach(span => {
 // }
 
 
-function slideTranslate() {
-    let allSlide = document.querySelectorAll(".slidesgroup"); // use dot notation to select by class
-    allSlide.forEach(slide => slide.classList.add('active')); // use forEach to loop over selected elements
-}
+// function slideTranslate() {
+//     let allSlide = document.querySelectorAll(".slidesgroup"); // use dot notation to select by class
+//     allSlide.forEach(slide => slide.classList.add('active')); // use forEach to loop over selected elements
+// }
 
 
 // function getActiveIndex() {
-//     const slides = document.querySelectorAll(".slidescontainer");
+//     const slides = document.querySelectorAll(".slidesgroup");
 //     const activeSlide = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
 //     return activeSlide;
 // }
@@ -295,9 +295,10 @@ function slideTranslate() {
 // console.log(activeIndex);
 
 function allFunctions() {
-    slideTranslate();
+    // slideTranslate();
     // getActiveSpanIndex();
     transformSlide();
+    // getActiveIndex();
 }
 
 // function getActiveSpanIndex() {
@@ -308,14 +309,6 @@ function allFunctions() {
 // const activeSpan = getActiveSpanIndex();
 
 // console.log(activeSpan);
-
-
-
-// function getIndiceAtivo() {
-//     const slides = document.querySelectorAll(".slidesgroup");
-//     const indiceAtivo = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
-//     return indiceAtivo;
-// }
 
 // const indiceAtivo = getIndiceAtivo();
 
@@ -331,19 +324,49 @@ function allFunctions() {
 //     document.getElementById("theDiv").style.transition = " all 2s"
 // }
 
-let slideActive;
-let number;
+let counterSlide;
+let idOnClick;
+let result;
+let slide;
+let slideToGetWidth;
+let slideWidth;
+let sWidth;
 
-function transformSlide(_string, number) {
+function transformSlide(_number) {
     let counterSlide = 1;
+    let idOnClick = _number;
+    let result = idOnClick - counterSlide;
+    let slide = document.getElementById("slidescontainer");
+    // let slideToGetWidth = document.querySelector(".slide").getComputedStyle(slideToGetWidth).width;
+    // let slideToGetWidth = document.getElementById("slide1");
+    // let slideWidth = window.getComputedStyle(slideToGetWidth).width;
+
+    // let slideWidth = 80;
+
+    // let slideToGetWidth = document.getElementById("slide1");
+    // let width = window.getComputedStyle(slideToGetWidth).width;
+
+    // var popupDiv = document.getElementsByClassName("popup")[0],
+    //    width = window.getComputedStyle(popupDiv).width;
+
+    // return result;
+
+    if (result >= 0) {
+        counterSlide = counterSlide + result;
+        // slide.style.transform = 'translateX(' + (-100 * result) + '%)';
+        slide.style.transform = 'translateX(' + (-80 * result) + '%';
+        // slide.style.transform = 'translateX(' + (-972 * result) + 'px)';
+        slide.style.transition = "transform 1s ease";
+    }
+    // var slide = document.getElementById("slide" + id);
     // let slideActive = document.getElementById(number);
-    let slideActive = number;
-    // let resultOperation = slideActive - counterSlide;
+    // let slideActive = number;
+    // slide.classList.add('active');
+
     // counterSlide = counterSlide + resultOperation;
-    return slideActive;
+    // return slideActive;
 
     // slidesecond.style.transform = 'translateX(' + (-sizes * counter) + 'px)';
-
 
     // let spanB = document.getElementById(id);
     // spanB.onclick.sty
@@ -355,9 +378,11 @@ function transformSlide(_string, number) {
     //     slideB.style.visibility = "visible";
     //     spanB.classList.toggle('active');
     // }
-};
+}
 
-console.log(slideActive);
+// console.log(width);
+
+// console.log(slideActive);
 
 // function showImage(id) {
 //     var image = document.getElementById(id);

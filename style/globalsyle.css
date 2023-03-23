@@ -1027,26 +1027,12 @@ body {
     /* transform: translateX(100%); */
 }
 
-.comments .container19 .container20 .slides .slidesgroup.active {
+/* .comments .container19 .container20 .slides .slidesgroup.active {
     transform: translateX(-100%);
     transition-duration: 1s;
-}
-
-.comments .container19 .container20 .slides .slidesgroup#slide1 {
-    transform: translateX(0%);
-}
-
-
-
-
-
-/* .comments .container19 .container20 .slides .slidesgroup.active {
-    position: absolute;
-    left: 0rem;
 } */
 
 .comments .container19 .container20 .slides .slidesgroup .slide {
-    /* width: 100%; */
     width: max-content;
     margin: 0rem 1rem 5rem 1rem;
 }
