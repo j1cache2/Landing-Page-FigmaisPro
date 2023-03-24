@@ -49,9 +49,21 @@
 }
 
 @font-face {
-    font-family: '';
+    font-family: 'AzeretMono-Bold';
     font-display: swap;
-    src: url(../fonts/);
+    src: url(../fonts/AzeretMono-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'AzeretMono-Black';
+    font-display: swap;
+    src: url(../fonts/AzeretMono-Black.ttf);
+}
+
+@font-face {
+    font-family: 'AzeretMono-ExtraBold';
+    font-display: swap;
+    src: url(../fonts/AzeretMono-ExtraBold.ttf);
 }
 
 :root {
@@ -60,7 +72,7 @@
     --color2: #131313;
     --color3: #d5ff40;
     --color4: #D4FE00;
-    --color5: #;
+    --color5: #ff0000;
     --color6: #;
     --color7: #;
     --color8: #;
@@ -76,9 +88,9 @@
     --font6: 'AzeretMono-Medium';
     --font7: 'AzeretMono-Light';
     --font8: 'AzeretMono-Regular';
-    --font9: '';
-    --font10: '';
-    --font11: '';
+    --font9: 'AzeretMono-Bold';
+    --font10: 'AzeretMono-ExtraBold';
+    --font11: 'AzeretMono-Black';
     --font12: '';
     --font13: '';
     --font14: '';
@@ -966,10 +978,6 @@ body {
     margin: auto;
 }
 
-.comments {
-    /* overflow: hidden; */
-}
-
 .comments .container19 {
     margin: auto;
     width: 100%;
@@ -1094,8 +1102,158 @@ body {
     background-color: var(--color4);
 }
 
+.price .container21 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    padding: 9.375rem 2.5rem 12.5rem 2.5rem;
+}
+
+.price .container21 .container22 h2 {
+    font: 700 3rem/1.2 var(--font1);
+    color: var(--color3);
+    text-align: center;
+    width: 100%;
+    max-width: 47.9375rem;
+    margin: auto;
+}
+
+.price .container21 .container22 p {
+    font: 300 1rem/1.6 var(--font7);
+    text-align: center;
+    width: 100%;
+    margin: 0.625rem auto 4rem;
+}
+
+.price .container21 .container22 .pricecontainers {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 67.5rem;
+    margin: auto;
+    gap: 2rem;
+
+    /* display: -ms-grid;
+    display: grid;
+    width: 100%;
+    max-width: 67.5rem;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 0px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto; */
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5rem 4.875rem 4.625rem 4.6875rem;
+    border-radius: 0.625rem;
+    color: var(--color2);
+    background-color: var(--color1);
+    width: 100%;
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer img.logo {
+    width: 10.25rem;
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer ul {
+    width: 100%;
+    max-width: 21.9375rem;
+    margin: 3rem auto;
+    padding-left: 1.25rem;
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer ul li {
+    font: 300 1rem/1.6 var(--font7);
+    list-style: circle;
+    list-style-image: url("../images/blackcheckmark.svg");
+    /* margin-bottom: 0.75rem; */
+    margin: 0rem 0rem 0.75rem 0.75rem;
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer ul li span {
+    color: var(--color5);
+    text-decoration: line-through;
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.firstp {
+    font: 400 1.25rem/1.5 var(--font8);
+    margin: 0;
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.firstp span {
+    font: 900 1.25rem/1.5 var(--font11);
+    color: var(--color5);
+    text-decoration: line-through;
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.secondp {
+    font: 800 3rem/1 var(--font10);
+    margin: 0;
+}
+
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.secondp span {
+    font: 800 8.1875rem/1 var(--font10);
+}
+
+/*Preencher botão com CSS do head e fazer ajustes*/
+
+/* .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue .button {} */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.price .container21 .container22 .pricecontainers .rightcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5rem 4.875rem 4.625rem 4.6875rem;
+    width: 100%;
+    border-radius: 0.625rem;
+    background: linear-gradient(320deg, #000, #393939) padding-box,
+        linear-gradient(155deg, #d5ff40, transparent 60%) border-box;
+    border-radius: 0.625rem;
+    border: 0.5px solid transparent;
+}
+
+.price .container21 .container22 .pricecontainers .rightcontainer img.logo {
+    width: 14.7525rem;
+}
+
+.price .container21 .container22 .pricecontainers .rightcontainer ul {
+    width: 100%;
+    max-width: 21.9375rem;
+    /* margin: 3rem 0rem; */
+    margin: 3rem auto;
+    padding-left: 1.25rem;
+}
+
+.price .container21 .container22 .pricecontainers .rightcontainer ul li {
+    font: 300 1rem/1.6 var(--font7);
+    color: var(--color1);
+    list-style: circle;
+    list-style-image: url("../images/greencheckmark.svg");
+    /* margin-bottom: 0.75rem; */
+    margin: 0rem 0rem 0.75rem 0.75rem;
+
+}
 
 
 
