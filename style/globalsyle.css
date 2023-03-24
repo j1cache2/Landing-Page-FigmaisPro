@@ -106,7 +106,7 @@ html {
     overflow: clip;
 } */
 
-ul li {
+li {
     list-style: none;
 }
 
@@ -1023,14 +1023,9 @@ body {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    /* animation: scrollcomments 10s linear infinite; */
-    /* transform: translateX(100%); */
+    /* animation: scrollcomments 10s linear infinite;
+    transform: translateX(100%); */
 }
-
-/* .comments .container19 .container20 .slides .slidesgroup.active {
-    transform: translateX(-100%);
-    transition-duration: 1s;
-} */
 
 .comments .container19 .container20 .slides .slidesgroup .slide {
     width: max-content;
@@ -1098,6 +1093,29 @@ body {
     width: 24px;
     background-color: var(--color4);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
