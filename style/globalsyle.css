@@ -1106,7 +1106,9 @@ body {
     margin: auto;
     width: 100%;
     max-width: 81rem;
-    padding: 9.375rem 2.5rem 12.5rem 2.5rem;
+    /* padding: 9.375rem 2.5rem 12.5rem 2.5rem; */
+    /* padding: 9.375rem 2.5rem 0rem 2.5rem; */
+    padding: 9.375rem 2.5rem 0rem;
 }
 
 .price .container21 .container22 h2 {
@@ -1328,11 +1330,54 @@ body {
     margin: 4rem auto 0rem;
 }
 
+.guaranty .container23 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    /* padding: 9.375rem 2.5rem 12.5rem 2.5rem; */
+    padding: 9.375rem 2.5rem 0rem 2.5rem;
+}
 
+.guaranty .container23 .container24 {
+    display: flex;
+    /* padding-right: 15.5rem; */
+    /* padding-left: 15.5rem; */
+    padding: 0rem 15.5rem 0rem;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4.25rem;
+}
 
+.guaranty .container23 .container24 .leftcontainer {
+    position: relative;
+}
 
+.guaranty .container23 .container24 .leftcontainer img.guarantylight {
+    position: absolute;
+    left: -204px;
+    top: -174px;
+    z-index: 1;
+    width: auto;
+    max-width: 39.125rem;
+}
 
+.guaranty .container23 .container24 .leftcontainer img.guarantyseven {
+    width: 17rem;
+}
 
+.guaranty .container23 .container24 .rightcontainer .toolcontainer {
+    display: flex;
+}
+
+.guaranty .container23 .container24 .rightcontainer .toolcontainer h2 {}
+
+.guaranty .container23 .container24 .rightcontainer .toolcontainer h2 span {}
+
+.guaranty .container23 .container24 .rightcontainer .toolcontainer img.figmatool {}
+
+.guaranty .container23 .container24 .rightcontainer p {}
+
+.guaranty .container23 .container24 .rightcontainer p span {}
 
 
 
