@@ -73,7 +73,7 @@
     --color3: #d5ff40;
     --color4: #D4FE00;
     --color5: #ff0000;
-    --color6: #;
+    --color6: #27a2f8;
     --color7: #;
     --color8: #;
     --color9: #;
@@ -1132,25 +1132,13 @@ body {
     max-width: 67.5rem;
     margin: auto;
     gap: 2rem;
-
-    /* display: -ms-grid;
-    display: grid;
-    width: 100%;
-    max-width: 67.5rem;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 2rem;
-    grid-row-gap: 0px;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto; */
 }
 
 .price .container21 .container22 .pricecontainers .leftcontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3.5rem 4.875rem 4.625rem 4.6875rem;
+    padding: 3.5rem 4.875rem 4.625rem 4.875rem;
     border-radius: 0.625rem;
     color: var(--color2);
     background-color: var(--color1);
@@ -1172,7 +1160,6 @@ body {
     font: 300 1rem/1.6 var(--font7);
     list-style: circle;
     list-style-image: url("../images/blackcheckmark.svg");
-    /* margin-bottom: 0.75rem; */
     margin: 0rem 0rem 0.75rem 0.75rem;
 }
 
@@ -1183,6 +1170,7 @@ body {
 
 .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.firstp {
     font: 400 1.25rem/1.5 var(--font8);
+    color: var(--color0);
     margin: 0;
 }
 
@@ -1194,6 +1182,7 @@ body {
 
 .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.secondp {
     font: 800 3rem/1 var(--font10);
+    color: var(--color0);
     margin: 0;
 }
 
@@ -1201,24 +1190,42 @@ body {
     font: 800 8.1875rem/1 var(--font10);
 }
 
-/*Preencher botão com CSS do head e fazer ajustes*/
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.45rem;
+}
 
-/* .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue .button {} */
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue .button a {
+    font: 600 1.125rem/1 var(--font3);
+    color: var(--color1);
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 3.75rem;
+    border-radius: 8rem;
+    background-color: var(--color6);
+    transition: all 200ms ease;
+}
 
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue .button a:hover {
+    box-shadow: 0 4px 25px 0 var(--color6);
+}
 
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue .button .kiwifylogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.price .container21 .container22 .pricecontainers .leftcontainer .pricevalue .button .kiwifylogo span {
+    font-family: var(--font3);
+    font-size: 0.625rem;
+}
 
 .price .container21 .container22 .pricecontainers .rightcontainer {
     display: flex;
@@ -1226,11 +1233,10 @@ body {
     align-items: center;
     padding: 3.5rem 4.875rem 4.625rem 4.6875rem;
     width: 100%;
-    border-radius: 0.625rem;
     background: linear-gradient(320deg, #000, #393939) padding-box,
         linear-gradient(155deg, #d5ff40, transparent 60%) border-box;
     border-radius: 0.625rem;
-    border: 0.5px solid transparent;
+    border: 1px solid transparent;
 }
 
 .price .container21 .container22 .pricecontainers .rightcontainer img.logo {
@@ -1240,7 +1246,6 @@ body {
 .price .container21 .container22 .pricecontainers .rightcontainer ul {
     width: 100%;
     max-width: 21.9375rem;
-    /* margin: 3rem 0rem; */
     margin: 3rem auto;
     padding-left: 1.25rem;
 }
@@ -1250,15 +1255,78 @@ body {
     color: var(--color1);
     list-style: circle;
     list-style-image: url("../images/greencheckmark.svg");
-    /* margin-bottom: 0.75rem; */
     margin: 0rem 0rem 0.75rem 0.75rem;
-
 }
 
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.firstp {
+    font: 400 1.25rem/1.4 var(--font8);
+    /* color: var(--color0); */
+    margin: 0;
+}
 
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.firstp span {
+    font: 800 1.25rem/1.5 var(--font10);
+    color: var(--color5);
+    text-decoration: line-through;
+}
 
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.secondp {
+    font: 800 3rem/1 var(--font10);
+    color: var(--color3);
+    margin: 0;
+}
 
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.secondp span {
+    font: 800 8.1875rem/1 var(--font10);
+}
 
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.thirdp {
+    font: 400 1.25rem/1.4 var(--font8);
+    color: var(--color3);
+    margin: 0;
+}
+
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.45rem;
+}
+
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue .button a {
+    font: 600 1.125rem/1 var(--font3);
+    color: var(--color0);
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 3.75rem;
+    border-radius: 8rem;
+    background-color: var(--color3);
+    transition: all 200ms ease;
+}
+
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue .button a:hover {
+    box-shadow: 0 4px 25px 0 var(--color3);
+}
+
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue .button .kiwifylogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.price .container21 .container22 .pricecontainers .rightcontainer .pricevalue .button .kiwifylogo span {
+    font-family: var(--font3);
+    font-size: 0.625rem;
+}
+
+.price .container21 .container22 img.payments {
+    display: block;
+    margin: 4rem auto 0rem;
+}
 
 
 
