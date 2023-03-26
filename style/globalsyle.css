@@ -66,6 +66,18 @@
     src: url(../fonts/AzeretMono-ExtraBold.ttf);
 }
 
+@font-face {
+    font-family: 'NeueMachina-Regular';
+    font-display: swap;
+    src: url(../fonts/NeueMachina-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'NeueMachina-Medium';
+    font-display: swap;
+    src: url(../fonts/NeueMachina-Medium.ttf);
+}
+
 :root {
     --color0: #000;
     --color1: #fff;
@@ -91,8 +103,8 @@
     --font9: 'AzeretMono-Bold';
     --font10: 'AzeretMono-ExtraBold';
     --font11: 'AzeretMono-Black';
-    --font12: '';
-    --font13: '';
+    --font12: 'NeueMachina-Regular';
+    --font13: 'NeueMachina-Medium';
     --font14: '';
     --font15: '';
 }
@@ -1365,23 +1377,113 @@ body {
     width: 17rem;
 }
 
-.guaranty .container23 .container24 .rightcontainer .toolcontainer {
+.guaranty .container23 .container24 .rightcontainer {
     display: flex;
+    width: 100%;
+    max-width: 23.75rem;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0.8125rem;
+    position: relative;
 }
 
-.guaranty .container23 .container24 .rightcontainer .toolcontainer h2 {}
+.guaranty .container23 .container24 .rightcontainer .toolcontainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 0.8125rem;
+    margin-bottom: 2rem;
+}
 
-.guaranty .container23 .container24 .rightcontainer .toolcontainer h2 span {}
+.guaranty .container23 .container24 .rightcontainer .toolcontainer h2 {
+    font: 450 1.75rem/1 var(--font13);
+    width: 8.3125rem;
+}
 
-.guaranty .container23 .container24 .rightcontainer .toolcontainer img.figmatool {}
+.guaranty .container23 .container24 .rightcontainer .toolcontainer h2 span {
+    font: 700 1.75rem/1 var(--font1);
+    color: var(--color3);
+}
 
-.guaranty .container23 .container24 .rightcontainer p {}
+.guaranty .container23 .container24 .rightcontainer .toolcontainer img.figmatool {
+    width: 14.375rem;
+}
 
-.guaranty .container23 .container24 .rightcontainer p span {}
+.guaranty .container23 .container24 .rightcontainer .toolcontainer img.figmatool:hover {
+    transform: translateY(1rem);
+    transition: all 500ms ease;
+}
 
+.guaranty .container23 .container24 .rightcontainer p {
+    font: 300 0.875rem/1.5 var(--font7);
+}
 
+.guaranty .container23 .container24 .rightcontainer p span {
+    color: var(--color3);
+}
 
+.about {
+    position: relative;
+    overflow: hidden;
+}
 
+.about .container25 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    padding: 7.5rem 2.5rem 0rem;
+}
+
+.about .container25 .container26 {
+    display: flex;
+    padding-left: 1.75rem;
+    align-items: center;
+    column-gap: 12rem;
+}
+
+.about .container25 .container26 .containertext {
+    width: 100%;
+    max-width: 27.8125rem;
+}
+
+.about .container25 .container26 .containertext h2 {
+    font: 700 3rem/1.2 var(--font1);
+    color: var(--color3);
+    margin-bottom: 1rem;
+}
+
+.about .container25 .container26 .containertext p {
+    font: 300 1rem/1.6 var(--font7);
+}
+
+.about .container25 .container26 img.thiagomedeiros {
+    width: 33%;
+    max-width: 23.875rem;
+}
+
+.about .greenbg {
+    background-color: var(--color3);
+    position: absolute;
+    left: auto;
+    top: 26%;
+    right: -15%;
+    bottom: 0%;
+    z-index: -1;
+    width: 60%;
+    height: 38.4375rem;
+}
+
+.faq .container27 {}
+
+.faq .container27 .container28 {}
+
+.faq .container27 .container28 .containertext {}
+
+.faq .container27 .container28 .containertext img.faqimage {}
+
+.faq .container27 .container28 .containertext p {}
+
+.faq .container27 .container28 a.button {}
 
 
 
