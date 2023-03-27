@@ -78,6 +78,24 @@
     src: url(../fonts/NeueMachina-Medium.ttf);
 }
 
+@font-face {
+    font-family: 'Montserrat-Light';
+    font-display: swap;
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    font-display: swap;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    font-display: swap;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
 :root {
     --color0: #000;
     --color1: #fff;
@@ -86,7 +104,7 @@
     --color4: #D4FE00;
     --color5: #ff0000;
     --color6: #27a2f8;
-    --color7: #;
+    --color7: #242424;
     --color8: #;
     --color9: #;
     --color10: #;
@@ -105,8 +123,9 @@
     --font11: 'AzeretMono-Black';
     --font12: 'NeueMachina-Regular';
     --font13: 'NeueMachina-Medium';
-    --font14: '';
-    --font15: '';
+    --font14: 'Montserrat-Light';
+    --font15: 'Montserrat-Regular';
+    --font16: 'Montserrat-Medium';
 }
 
 * {
@@ -125,11 +144,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-} */
-
 li {
     list-style: none;
 }
@@ -142,7 +156,72 @@ body {
     color: var(--color1);
     font-size: 1.125rem;
     line-height: 1.4;
-    font-weight: 400;
+    /* font-weight: 400; */
+}
+
+@keyframes bgloader {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+        /* transform: translateY(-100%); */
+    }
+
+    /* 75% {
+        opacity: 1;
+        transform: translateY(-100%);
+    } */
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.loader {
+    position: fixed;
+    z-index: 1001;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color7);
+    animation: bgloader 5s forwards;
+
+}
+
+@keyframes loader {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /*75% {
+        transform: translateY(0);
+        opacity: 1;
+    } */
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.loader img {
+    width: 100%;
+    max-width: 14.75rem;
+    transform: translateY(-100%);
+    animation: loader 2s forwards;
 }
 
 .header {
@@ -1473,44 +1552,123 @@ body {
     height: 38.4375rem;
 }
 
-.faq .container27 {}
+.faq .container27 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    padding: 9.375rem 2.5rem 0rem;
+}
 
-.faq .container27 .container28 {}
+.faq .container27 .container28 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.faq .container27 .container28 .containertext {}
+.faq .container27 .container28 .containertext {
+    display: flex;
+    width: 45.3125rem;
+    align-items: center;
+    grid-column-gap: 2rem;
+    margin-bottom: 2rem;
+}
 
-.faq .container27 .container28 .containertext img.faqimage {}
+.faq .container27 .container28 .containertext img.faqimage {
+    width: 100%;
+    max-width: 17.1875rem;
+}
 
-.faq .container27 .container28 .containertext p {}
+.faq .container27 .container28 .containertext p {
+    font: 400 0.875rem/1.8 var(--font15);
+}
 
-.faq .container27 .container28 a.button {}
+.faq .container27 .container28 a.button {
+    font: 600 1.125rem/1.575 var(--font3);
+    color: var(--color0);
+    display: flex;
+    padding: 1.25rem 2.9375rem;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 1rem;
+    border-radius: 2.8125rem;
+    background-color: var(--color3);
+    transition: all 200ms ease;
+}
 
+.faq .container27 .container28 a.button:hover {
+    box-shadow: 0 4px 25px 0 var(--color3);
+}
 
+.faq .container27 .container28 a.button img.whatsimg {
+    width: 2.0625rem;
+}
 
+.youraccess {
+    padding-top: 9.375rem;
+    overflow: hidden;
+}
 
+.youraccess img {
+    width: 100%;
+    vertical-align: middle;
+}
 
+.contact {
+    background-color: var(--color3);
+}
 
+.contact .container29 {
+    margin: auto;
+    width: 100%;
+    max-width: 81rem;
+    padding: 7.8125rem 2.5rem;
+}
 
+.contact .container29 .container30 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color0);
+    gap: 0.625rem;
+}
 
+.contact .container29 .container30 a.firstlink img.figmaislogo {
+    width: 8.5625rem;
+    display: block;
+}
 
+.contact .container29 .container30 span {
+    font: 300 0.875rem/1.5 var(--font7);
+}
 
+.contact .container29 .container30 a.secondlink {
+    font: 400 0.75rem/1 var(--font8);
+    display: flex;
+    align-items: center;
+    column-gap: 0.375rem;
+}
 
+footer {
+    font: 700 0.875rem/1 var(--font1);
+    color: var(--color1);
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
+footer a:hover {
+    color: var(--color4);
+}
 
 @media (max-width: 991px) {}
 
 @media (max-width: 767px) {}
 
+@media(max-width: 539px) {
+    footer {
+        font-size: 10px;
+    }
+}
 
 
 
