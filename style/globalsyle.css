@@ -166,13 +166,13 @@ body {
 
     50% {
         opacity: 1;
-        /* transform: translateY(-100%); */
+        /* transform: translateY(-50%); */
     }
 
-    /* 75% {
+    75% {
         opacity: 1;
-        transform: translateY(-100%);
-    } */
+        /* transform: translateY(-100%); */
+    }
 
     100% {
         opacity: 0;
@@ -191,8 +191,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--color7);
-    animation: bgloader 5s forwards;
-
+    animation: bgloader 0.5s 1s forwards;
 }
 
 @keyframes loader {
@@ -201,10 +200,10 @@ body {
         opacity: 1;
     }
 
-    50% {
-        transform: translateY(0);
+    /* 50% {
+        transform: translateY(-50%);
         opacity: 1;
-    }
+    } */
 
     /*75% {
         transform: translateY(0);
@@ -213,7 +212,7 @@ body {
 
     100% {
         transform: translateY(-100%);
-        opacity: 0;
+        opacity: 1;
     }
 }
 
@@ -221,7 +220,7 @@ body {
     width: 100%;
     max-width: 14.75rem;
     transform: translateY(-100%);
-    animation: loader 2s forwards;
+    animation: loader 0.5s forwards;
 }
 
 .header {
@@ -1231,7 +1230,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3.5rem 4.875rem 4.625rem 4.875rem;
+    /* padding: 3.5rem 4.875rem 4.625rem 4.875rem; */
+    padding: 3.5rem 2rem 4.625rem;
     border-radius: 0.625rem;
     color: var(--color2);
     background-color: var(--color1);
@@ -1324,7 +1324,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3.5rem 4.875rem 4.625rem 4.6875rem;
+    /* padding: 3.5rem 4.875rem 4.625rem 4.6875rem; */
+    padding: 3.5rem 2rem 4.625rem;
     width: 100%;
     background: linear-gradient(320deg, #000, #393939) padding-box,
         linear-gradient(155deg, #d5ff40, transparent 60%) border-box;
@@ -1431,9 +1432,8 @@ body {
 
 .guaranty .container23 .container24 {
     display: flex;
-    /* padding-right: 15.5rem; */
-    /* padding-left: 15.5rem; */
-    padding: 0rem 15.5rem 0rem;
+    justify-content: center;
+    /* padding: 0rem 15.5rem 0rem; */
     flex-direction: row;
     align-items: center;
     column-gap: 4.25rem;
@@ -1454,6 +1454,8 @@ body {
 
 .guaranty .container23 .container24 .leftcontainer img.guarantyseven {
     width: 17rem;
+    /* width: 100%; */
+    /* max-width: 17rem; */
 }
 
 .guaranty .container23 .container24 .rightcontainer {
