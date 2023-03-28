@@ -19,13 +19,14 @@ spans.forEach(span => {
             span.classList.remove('active');
         });
         span.classList.add('active');
+        clearInterval(slideInterval);
     });
 });
 
-function allFunctions() {
-    transformSlide();
-    changeBtn();
-}
+// function allFunctions() {
+//     transformSlide();
+//     changeBtn();
+// }
 
 let counterSlide;
 let idOnClick;
@@ -47,9 +48,7 @@ function transformSlide(_number) {
     }
 }
 
-
-// setInterval(slideAuto, 3000);
-setInterval(slideAuto, 1000);
+const slideInterval = setInterval(slideAuto, 3000);
 
 function slideAuto() {
     transformSlideAuto();
@@ -71,77 +70,35 @@ function transformSlideAuto() {
     });
 }
 
-// let currentIndex = 0;
-// let newIndex;
-
-// function transformSpanAuto() {
-
-//     let autoSpan = Array.from(document.querySelectorAll(".slidenavigation span"));
-
-//     if (currentIndex <= 3) {
-
-//         let currentIndex = autoSpan.findIndex(span => span.classList.contains('active'));
-
-//         autoSpan[currentIndex].classList.remove('active');
-
-//         newIndex = currentIndex + 1;
-
-//         autoSpan[newIndex].classList.add('active');
-
-//         // console.log(newIndex);
-
-//     } else {
-//         autoSpan[0].classList.add('active');
-//         newIndex = 0;
-//     }
-// }
-
-// let currentIndex = 0;
-// let newIndex = 0;
-
-// function transformSpanAuto() {
-
-//     let autoSpan = Array.from(document.querySelectorAll(".slidenavigation span"));
-
-//     if (currentIndex <= 3) {
-
-//         let currentIndex = autoSpan.findIndex(span => span.classList.contains('active'));
-
-//         autoSpan[currentIndex].classList.remove('active');
-
-//         newIndex = currentIndex + 1;
-
-//         autoSpan[newIndex].classList.add('active');
-
-//     } else {
-//         newIndex = currentIndex + 1;
-//         console.log(newIndex);
-//         // autoSpan[0].classList.add('active');
-//         // newIndex = 0;
-//     }
-// }
-
 let currentIndex = 0;
 let newIndex = 0;
 
 function transformSpanAuto() {
-
     let autoSpan = Array.from(document.querySelectorAll(".slidenavigation span"));
+    let currentIndex = autoSpan.findIndex(span => span.classList.contains('active'));
+    autoSpan[currentIndex].classList.remove('active');
+    newIndex = (currentIndex + 1) % autoSpan.length;
+    autoSpan[newIndex].classList.add('active');
 
-    if (currentIndex <= 3) {
+};
 
-        let currentIndex = autoSpan.findIndex(span => span.classList.contains('active'));
+//Corrigir grip-column-gap para column-gap!!!
 
-        autoSpan[currentIndex].classList.remove('active');
+//4998 
 
-        newIndex = currentIndex + 1;
+//5739
 
-        autoSpan[newIndex].classList.add('active');
+let startAnimation = window.scrollY;
+let endAnimation = window.scrollY;
 
-    } else {
-        newIndex = currentIndex + 1;
-        console.log(newIndex);
-        // autoSpan[0].classList.add('active');
-        // newIndex = 0;
+addEventListener('DOMContentLoaded', function scrollPage() {
+    if (startAnimation > 100) {
+        return alert('Parabéns');
     }
-}
+})
+
+// function scrollPage() {
+//     if (startAnimation > 100) {
+//         console.log(startAnimation);
+//     }
+// }
