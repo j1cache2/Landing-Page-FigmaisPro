@@ -1672,6 +1672,8 @@ footer a:hover {
     }
 }
 
+@media(max-width: 479px) {}
+
 
 
 

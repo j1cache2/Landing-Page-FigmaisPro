@@ -88,17 +88,64 @@ function transformSpanAuto() {
 
 //5739
 
-let startAnimation = window.scrollY;
-let endAnimation = window.scrollY;
+// let startAnimation = window.scrollY;
+// let endAnimation = window.scrollY;
 
-addEventListener('DOMContentLoaded', function scrollPage() {
-    if (startAnimation > 100) {
-        return alert('Parabéns');
-    }
-})
 
-// function scrollPage() {
-//     if (startAnimation > 100) {
-//         console.log(startAnimation);
+
+// addEventListener('DOMContentLoaded', function scrollPage() {
+//     if (startAnimation >= 4998 && startAnimation <= 5739) {
+//         return alert('Parabéns');
 //     }
-// }
+// })
+
+// console.log(elementsImg);
+//4996 5996
+//4339 5339
+//5072 and 6128 --> 1056
+
+//A função abaixo já funciona, porém deve ser ajustada a fim de funcionar para diferentes tamanhos de tela. Nesse caso, devemos pegar a altura da <section>> ao invés da quantidade px rolada.
+
+// let scrolled;
+
+// window.addEventListener("scroll", function (event) {
+
+//     let elementsImg = document.querySelector('.elementsimg')
+
+//     // let top = this.scrollY;
+//     let top = this.scrollY;
+
+//     let animation = top - 4339;
+
+//     var valueToMove = 4 / 1000;
+
+//     if (animation > 0 && animation <= 1000) {
+//         elementsImg.style.transform = 'translateY(' + (animation * valueToMove) + 'rem';
+//     }
+// }, false); 
+
+
+window.addEventListener("scroll", function (event) {
+
+    let topRef = this.document.getElementById('startAnimation');
+    let bottomRef = this.document.getElementById('endAnimation');
+    
+
+    // let parentTop = topRef.offsetTop;
+    let parentBottom = bottomRef.offsetTop;
+
+    let elementsImg = document.querySelector('.elementsimg')
+
+    // let top = this.scrollY;
+    let top = this.scrollY;
+
+    // console.log(parentTop, parentBottom);
+
+    let animation = parentBottom - top;
+
+    var valueToMove = 4 / (parentBottom - top);
+
+    if (animation > 0 && animation <= 707) {
+        elementsImg.style.transform = 'translateY(' + (animation * valueToMove) + 'rem';
+    }
+}, false); 
