@@ -732,7 +732,8 @@ body {
     margin: auto;
     width: 100%;
     max-width: 81rem;
-    padding: 9.375rem 2.5rem 0rem 2.5rem;
+    /* padding: 9.375rem 2.5rem 0rem 2.5rem; */
+    padding: 9.375rem 2.5rem;
 }
 
 .learn .container9 .container10 {
@@ -791,7 +792,8 @@ body {
     /* max-width: 81rem; */
     /* padding: 9.375rem 2.5rem 7.6875rem 2.5rem; */
     /* padding: 9.375rem 2.5rem 12.5rem 2.5rem; */
-    padding: 9.375rem 0rem 12.5rem 0rem;
+    /* padding: 9.375rem 0rem 12.5rem 0rem; */
+    padding: 0rem 0rem 12.5rem;
 }
 
 .modules .container11 .container12 h2 {
@@ -831,6 +833,7 @@ body {
 
 .figmaispro {
     position: relative;
+    overflow: hidden;
 }
 
 .figmaispro .container13 {
