@@ -1030,6 +1030,8 @@ body {
 .webflowelementor .container17 .container18 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .webflowelementor .container17 .container18 img.webflowbg {
@@ -1039,36 +1041,47 @@ body {
     max-width: 80.625rem;
 }
 
-.webflowelementor .container17 .container18 .logos {
+.webflowelementor .container17 .container18 .content {
+    width: 100%;
+    position: absolute;
+    /*O rem abaixo é o original. Em seguida, o rem pré animação*/
+    /* top: 3.5rem; */
+    /* top: 3rem; */
+    top: 5rem;
+}
+
+.webflowelementor .container17 .container18 .content .logos {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     width: 100%;
     /* max-width: 40.6875rem; */
     /* margin: -15rem auto 1rem; */
     max-width: 46rem;
-    margin: -15.5rem auto 1rem;
+    /* margin: -15.5rem auto 1rem; */
+    margin: 0rem auto 1rem;
 }
 
-.webflowelementor .container17 .container18 .logos img {
+.webflowelementor .container17 .container18 .content .logos img {
     margin: auto;
     position: relative;
     /* top: -45px; */
     /* width: 15.75rem; */
 }
 
-.webflowelementor .container17 .container18 .logos img.webflowlogo {
+.webflowelementor .container17 .container18 .content .logos img.webflowlogo {
     /* margin-left: 1rem; */
     margin-left: 2.5rem;
 }
 
-.webflowelementor .container17 .container18 p {
+.webflowelementor .container17 .container18 .content p {
     font: 300 1rem/1.6 var(--font7);
     color: var(--color3);
     text-align: center;
     width: 100%;
     max-width: 34.9375rem;
     margin: auto;
+    /* transform: translateY(2rem); */
 }
 
 .comments .container19 {

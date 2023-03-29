@@ -191,3 +191,31 @@ window.addEventListener("scroll", function (event) {
         updatesImg.style.transform = 'translateY(' + (-animation * updatesImgValueToMove) + 'rem';
     };
 }, false);
+
+window.addEventListener("scroll", function (event) {
+
+    let top = this.scrollY;
+    let start = document.querySelector('.welcometofigmaispro').offsetTop;
+    let end = document.querySelector('.webflowelementor').offsetTop;
+    let animation = top - start;
+    let sectionHeight = end - start;
+
+    console.log(top, start, end);
+
+    let webflowLogoImg = document.querySelector('.webflowlogo');
+    let webflowLogoImgValueToMove = 3.5 / sectionHeight;
+
+    let elementorlogoImg = document.querySelector('.elementorlogo')
+    let elementorlogoImgValueToMove = 4.5 / sectionHeight;
+
+    let animateP = document.querySelector('.animatep')
+    let animatePValueToMove = 3 / sectionHeight;
+
+    if (top >= start && top <= end) {
+        webflowLogoImg.style.transform = 'translateY(' + (-animation * webflowLogoImgValueToMove) + 'rem';
+
+        elementorlogoImg.style.transform = 'translateY(' + (-animation * elementorlogoImgValueToMove) + 'rem';
+
+        animateP.style.transform = 'translateY(' + (-animation * animatePValueToMove) + 'rem';
+    };
+}, false);
