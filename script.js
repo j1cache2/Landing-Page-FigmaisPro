@@ -1,16 +1,5 @@
 "use strict";
 
-// let spans = document.querySelectorAll(".slidenavigation span");
-
-// spans.forEach(span => {
-//     span.addEventListener('click', () => {
-//         document.querySelectorAll('span').forEach(span => {
-//             span.classList.remove('active');
-//         });
-//         span.classList.add('active');
-//     });
-// });
-
 let spans = document.querySelectorAll(".slidenavigation span");
 
 spans.forEach(span => {
@@ -81,8 +70,6 @@ function transformSpanAuto() {
     autoSpan[newIndex].classList.add('active');
 
 };
-
-//Corrigir grip-column-gap para column-gap!!!
 
 //A função abaixo já funciona, porém deve ser ajustada a fim de funcionar para diferentes tamanhos de tela. Nesse caso, devemos pegar a altura da <section>> ao invés da quantidade px rolada.
 
@@ -195,27 +182,63 @@ window.addEventListener("scroll", function (event) {
 window.addEventListener("scroll", function (event) {
 
     let top = this.scrollY;
-    let start = document.querySelector('.welcometofigmaispro').offsetTop;
-    let end = document.querySelector('.webflowelementor').offsetTop;
-    let animation = top - start;
+    let start = document.querySelector('.welcometofigmaispro').offsetTop * 1.1;
+    let end = start + 400;
     let sectionHeight = end - start;
 
-    console.log(top, start, end);
 
+    let animationOne = top - start;
     let webflowLogoImg = document.querySelector('.webflowlogo');
-    let webflowLogoImgValueToMove = 3.5 / sectionHeight;
+    let webflowLogoImgValueToMove = 4 / sectionHeight;
 
+
+    let secondStart = start + 100;
+    let secondEnd = start + 300;
+    let animationTwo = top - secondStart;
     let elementorlogoImg = document.querySelector('.elementorlogo')
-    let elementorlogoImgValueToMove = 4.5 / sectionHeight;
+    let elementorlogoImgValueToMove = 4 / sectionHeight;
 
+
+    let thirdStart = start + 200;
+    let animationThree = top - thirdStart;
     let animateP = document.querySelector('.animatep')
-    let animatePValueToMove = 3 / sectionHeight;
+    let animatePValueToMove = 4 / sectionHeight;
 
-    if (top >= start && top <= end) {
-        webflowLogoImg.style.transform = 'translateY(' + (-animation * webflowLogoImgValueToMove) + 'rem';
+    // if (top >= start && top <= thirdStart) {
+    //     webflowLogoImg.style.transform = 'translateY(' + (-animationOne * webflowLogoImgValueToMove) + 'rem';
+    //     webflowLogoImg.style.opacity = (animationOne * webflowLogoImgValueToMove);
+    // };
 
-        elementorlogoImg.style.transform = 'translateY(' + (-animation * elementorlogoImgValueToMove) + 'rem';
+    // if (top >= secondStart && top <= secondEnd) {
+    //     elementorlogoImg.style.transform = 'translateY(' + (-animationTwo * elementorlogoImgValueToMove) + 'rem';
+    //     elementorlogoImg.style.opacity = (animationTwo * elementorlogoImgValueToMove);
+    // };
 
-        animateP.style.transform = 'translateY(' + (-animation * animatePValueToMove) + 'rem';
+    // if (top >= thirdStart && top <= end) {
+    //     animateP.style.transform = 'translateY(' + (-animationThree * animatePValueToMove) + 'rem';
+    //     animateP.style.opacity = (animationThree * animatePValueToMove);
+    // };
+
+    if (top <= start) {
+        webflowLogoImg.style.opacity = 0;
+    } else if
+        (top >= start && top <= thirdStart) {
+        webflowLogoImg.style.transform = 'translateY(' + (-animationOne * webflowLogoImgValueToMove) + 'rem';
+        webflowLogoImg.style.opacity = (animationOne * webflowLogoImgValueToMove);
+    };
+
+    if (top <= secondStart) {
+        elementorlogoImg.style.opacity = 0;
+    } else if
+        (top >= secondStart && top <= secondEnd) {
+        elementorlogoImg.style.transform = 'translateY(' + (-animationTwo * elementorlogoImgValueToMove) + 'rem';
+        elementorlogoImg.style.opacity = (animationTwo * elementorlogoImgValueToMove);
+    };
+
+    if (top <= thirdStart) {
+        animateP.style.opacity = 0;
+    } else if (top >= thirdStart && top <= end) {
+        animateP.style.transform = 'translateY(' + (-animationThree * animatePValueToMove) + 'rem';
+        animateP.style.opacity = (animationThree * animatePValueToMove);
     };
 }, false);
