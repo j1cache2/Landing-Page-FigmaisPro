@@ -132,7 +132,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 a {
@@ -244,7 +244,8 @@ body {
 }
 
 .header .container1 .container2 .leftcontainer h1 {
-    font: 700 3.75rem/1.1 var(--font1);
+    /* font: 700 3.75rem/1.1 var(--font1); */
+    font: 700 3rem/1.1 var(--font1);
     margin: 3rem 0rem 1.5rem;
 }
 
@@ -329,10 +330,7 @@ body {
 
 .header .container1 .container2 .rightcontainer .firstelement:hover,
 .header .container1 .container2 .rightcontainer .secondelement:hover {
-    /* transform: translate3d(0px, 1rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
     transform: translateY(1rem);
-    /* opacity: 1; */
-    /* transform-style: preserve-3d; */
     transition: all 500ms ease;
 }
 
@@ -507,6 +505,7 @@ body {
 
 .leaveps .container5 .container6 .leftcontainer .info .students .studentsnumber {
     width: 11.1875rem;
+    max-width: 100%;
 }
 
 .leaveps .container5 .container6 .leftcontainer .info .students .studentsphoto {
@@ -523,6 +522,7 @@ body {
 
 .leaveps .container5 .container6 .leftcontainer .info .assessments .onehundred {
     width: 11.1875rem;
+    max-width: 100%;
 }
 
 .leaveps .container5 .container6 .leftcontainer .info .assessments .stars {
@@ -809,6 +809,10 @@ body {
     max-width: none;
 }
 
+.figmaispro .container13 .container14 img.thiagobgmobile {
+    display: none;
+}
+
 .figmaispro .container13 .container14 .rightcontainer img.thiagobg {
     width: auto;
     max-width: 34.8125rem;
@@ -1034,11 +1038,12 @@ body {
 
 .comments .container19 .container20 .slides .slidesgroup .slide .content .headerandstars h3 {
     font: 600 1rem/1 var(--font3);
-    width: max-content;
+    width: 100%;
 }
 
 .comments .container19 .container20 .slides .slidesgroup .slide .content .headerandstars img.stars {
-    width: 8rem;
+    width: 100%;
+    max-width: 8rem;
 }
 
 .comments .container19 .container20 .slides .slidesgroup .slide p {
@@ -1438,8 +1443,9 @@ body {
 
 .faq .container27 .container28 .containertext {
     display: flex;
-    width: 45.3125rem;
     align-items: center;
+    width: 100%;
+    max-width: 45.3125rem;
     column-gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -1510,6 +1516,7 @@ body {
 
 .contact .container29 .container30 span {
     font: 300 0.875rem/1.5 var(--font7);
+    text-align: center;
 }
 
 .contact .container29 .container30 a.secondlink {
@@ -1542,7 +1549,6 @@ footer a:hover {
     }
 
     .header .container1 .container2 .leftcontainer h1 {
-        font: 700 3rem/1.1 var(--font1);
         margin: 2.5rem 0rem 1.5rem;
     }
 
@@ -1686,10 +1692,6 @@ footer a:hover {
         margin: 0rem auto 3rem;
     }
 
-    .comments .container19 .container20 .slides .slidesgroup .slide {
-        margin: 0rem 1.5rem 5rem;
-    }
-
     .price .container21 {
         padding: 7.5rem 0rem 0rem;
     }
@@ -1752,8 +1754,291 @@ footer a:hover {
     }
 }
 
+/*Thiago do Header de 479px para baixo em media query de 680px*/
 @media (max-width: 767px) {
-    /*Fazer essa inteira hoje!*/
+
+    .header .container1 {
+        padding: 3rem 1.25rem 0rem;
+    }
+
+    .header .container1 .container2 .leftcontainer h1 {
+        font: 700 2rem/1.2 var(--font1);
+        margin: 1.5rem 0rem 1.25rem;
+    }
+
+    .header .container1 .container2 .leftcontainer p {
+        font: 400 1.063rem /1.4 var(--font2);
+    }
+
+    .header .container1 .container2 .leftcontainer .button {
+        margin-top: 1.5rem;
+    }
+
+
+    .header .container1 .container2 .rightcontainer .firstelement {
+        left: 4rem;
+        /* top: 21.8rem; */
+        top: 18.3rem;
+        width: 9rem;
+    }
+
+    .header .container1 .container2 .rightcontainer .secondelement {
+        /* top: 14.6rem; */
+        top: 11.6rem;
+        right: 4rem;
+        width: 9rem;
+        max-width: 11.5625rem;
+    }
+
+    .wordsmoving {
+        margin-top: -8.2378rem;
+    }
+
+    .figmaisbetter .container3 {
+        padding: 5rem 1.25rem 6.25rem;
+    }
+
+    .figmaisbetter .container3 h2 {
+        font: 700 2rem/1.2 var(--font1);
+        width: 100%;
+        margin: 0rem;
+        display: flex;
+    }
+
+    .figmaisbetter .container3 span {
+        font: 300 2rem/1.2 var(--font4);
+    }
+
+    .figmaisbetter .container3 .container4 {
+        flex-direction: column;
+        column-gap: 2rem;
+    }
+
+    .figmaisbetter .container3 .container4 .images {
+        padding: 0rem;
+    }
+
+    .leaveps {
+        overflow: hidden;
+    }
+
+    .leaveps .container5 {
+        padding: 0rem 1.25rem;
+    }
+
+    .leaveps .container5 .container6 {
+        column-gap: 4.5rem;
+    }
+
+    .leaveps .container5 .container6 .leftcontainer {
+        padding: 0rem;
+    }
+
+    .leaveps .container5 .container6 .rightcontainer h2 {
+        font: 500 1.125rem/1.4 var(--font6);
+    }
+
+    .leaveps .container5 .container6 .rightcontainer p {
+        margin: 1rem 0rem 1.5rem;
+    }
+
+    .public {
+        overflow: hidden;
+    }
+
+    .public .container7 {
+        padding: 5rem 1.25rem;
+    }
+
+    .public .container7 .container8 {
+        padding: 0rem;
+    }
+
+    .public .container7 .container8 h2 {
+        font: 700 2rem/1.2 var(--font1);
+    }
+
+    .learn {
+        overflow: hidden;
+    }
+
+    .learn .container9 {
+        padding: 0rem 1.25rem 5rem;
+    }
+
+    .learn .container9 .container10 {
+        row-gap: 3rem;
+    }
+
+    .learn .container9 .container10 .leftcontainer {
+        left: 0px;
+    }
+
+    .learn .container9 .container10 .leftcontainer .macbook {
+        margin-bottom: -7px;
+    }
+
+    .learn .container9 .container10 .rightcontainer h2 {
+        font: 700 1.625rem/1.2 var(--font1);
+    }
+
+    .modules .container11 .container12 h2 {
+        font: 700 1.625rem/1.2 var(--font1);
+        margin-bottom: 2rem;
+        padding: 0rem 1.25rem;
+    }
+
+    .figmaispro {
+        overflow: hidden;
+    }
+
+    .figmaispro .container13 {
+        padding: 5rem 1.25rem;
+    }
+
+    .figmaispro .container13 .container14 .leftcontainer h2 {
+        font: 700 2rem/1.2 var(--font1);
+        margin: 0rem auto 1.25rem;
+    }
+
+    /*Criar media query para corrigir a posição*/
+
+    .figmaispro .container13 .container14 .leftcontainer img {
+        left: 24.1rem;
+        bottom: 5.2rem;
+    }
+
+    .figmaispro .container13 .container14 .leftcontainer p {
+        font: 400 1.063rem/1.4 var(--font8);
+    }
+
+    .figmaispro .container13 .container14 .rightcontainer {
+        display: none;
+    }
+
+    .figmaispro .container13 .container14 img.thiagobgmobile {
+        display: block;
+        max-width: 100%;
+    }
+
+    .welcometofigmaispro .container15 {
+        padding-bottom: 7.5rem;
+    }
+
+    .welcometofigmaispro .container15 .container16 h2 {
+        font: 700 1.625rem/1.2 var(--font1);
+    }
+
+    .welcometofigmaispro .container15 .container16 img.logo {
+        margin: 1.25rem auto 3rem;
+    }
+
+    .webflowelementor .container17 {
+        padding: 0rem 1.25rem 7.5rem;
+    }
+
+    .webflowelementor .container17 .container18 .content {
+        top: 2rem;
+    }
+
+    .webflowelementor .container17 .container18 .content .logos {
+        flex-direction: column;
+    }
+
+    .webflowelementor .container17 .container18 .content .logos img.webflowlogo,
+    .webflowelementor .container17 .container18 .content .logos img.elementorlogo {
+        width: 50%;
+        margin: auto;
+    }
+
+    .comments .container19 {
+        padding: 7.5rem 1.25rem 0rem;
+    }
+
+    .comments .container19 .container20 h2 {
+        font: 700 2rem/1.2 var(--font1);
+        margin: 0rem auto 2rem;
+    }
+
+    .comments .container19 .container20 .slides .slidesgroup .slide {
+        width: max-content;
+        margin: 0rem 1rem 2rem;
+    }
+
+    .price .container21 {
+        padding: 5rem 0rem 0rem;
+    }
+
+    .price .container21 .container22 h2 {
+        font: 700 2rem/1.2 var(--font1);
+    }
+
+    .price .container21 .container22 p {
+        margin: 0.625rem auto 2rem;
+    }
+
+    .price .container21 .container22 .pricecontainers {
+        padding: 0rem 1.25rem;
+    }
+
+    .price .container21 .container22 img.payments {
+        margin: 2rem auto 0rem;
+    }
+
+    .guaranty .container23 {
+        overflow: hidden;
+    }
+
+    .guaranty .container23 {
+        padding: 5rem 1.25rem 0rem;
+    }
+
+    .guaranty .container23 .container24 .leftcontainer img.guarantyseven {
+        /* width: 17rem; */
+        width: 50%;
+    }
+
+    .guaranty .container23 .container24 .leftcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .about .container25 {
+        padding: 3.75rem 1.25rem 0rem;
+    }
+
+
+    .about .container25 .container26 {
+        padding-left: 0rem;
+        column-gap: 12rem;
+    }
+
+    .about .container25 .container26 .containertext {
+        max-width: 100%;
+    }
+
+    .about .container25 .container26 .containertext h2 {
+        font: 700 2rem/1.2 var(--font1);
+    }
+
+    .faq .container27 {
+        padding: 5rem 1.25rem 0rem;
+    }
+
+    .faq .container27 .container28 .containertext {
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+    }
+
+    .youraccess {
+        padding-top: 5rem;
+    }
+
+    .contact .container29 {
+        padding: 7.8125rem 1.25rem;
+    }
 }
 
 @media(max-width: 539px) {
