@@ -25,12 +25,6 @@
 }
 
 @font-face {
-    font-family: 'NeueMachina-Ultralight';
-    font-display: swap;
-    src: url(../fonts/NeueMachina-Ultralight.ttf);
-}
-
-@font-face {
     font-family: 'AzeretMono-Medium';
     font-display: swap;
     src: url(../fonts/AzeretMono-Medium.ttf);
@@ -49,12 +43,6 @@
 }
 
 @font-face {
-    font-family: 'AzeretMono-Bold';
-    font-display: swap;
-    src: url(../fonts/AzeretMono-Bold.ttf);
-}
-
-@font-face {
     font-family: 'AzeretMono-Black';
     font-display: swap;
     src: url(../fonts/AzeretMono-Black.ttf);
@@ -67,33 +55,15 @@
 }
 
 @font-face {
-    font-family: 'NeueMachina-Regular';
-    font-display: swap;
-    src: url(../fonts/NeueMachina-Regular.ttf);
-}
-
-@font-face {
     font-family: 'NeueMachina-Medium';
     font-display: swap;
     src: url(../fonts/NeueMachina-Medium.ttf);
 }
 
 @font-face {
-    font-family: 'Montserrat-Light';
-    font-display: swap;
-    src: url(../fonts/Montserrat-Light.ttf);
-}
-
-@font-face {
     font-family: 'Montserrat-Regular';
     font-display: swap;
     src: url(../fonts/Montserrat-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Montserrat-Medium';
-    font-display: swap;
-    src: url(../fonts/Montserrat-Medium.ttf);
 }
 
 :root {
@@ -105,34 +75,28 @@
     --color5: #ff0000;
     --color6: #27a2f8;
     --color7: #242424;
-    --color8: #;
-    --color9: #;
-    --color10: #;
+    --color8: #8b8b8b;
+    --color9: #393939;
 
     --fonte-padrão: 'Arial, Verdana, Helvetica, sans-serif';
     --font1: 'NeueMachina-Bold';
     --font2: 'AzeretMono-Regular';
     --font3: 'AzeretMono-SemiBold';
     --font4: 'NeueMachina-Light';
-    --font5: 'NeueMachina-Ultralight';
     --font6: 'AzeretMono-Medium';
     --font7: 'AzeretMono-Light';
     --font8: 'AzeretMono-Regular';
-    --font9: 'AzeretMono-Bold';
     --font10: 'AzeretMono-ExtraBold';
     --font11: 'AzeretMono-Black';
-    --font12: 'NeueMachina-Regular';
     --font13: 'NeueMachina-Medium';
-    --font14: 'Montserrat-Light';
     --font15: 'Montserrat-Regular';
-    --font16: 'Montserrat-Medium';
 }
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 a {
@@ -216,7 +180,6 @@ body {
 }
 
 .header .container1 {
-    /* position: relative; */
     margin: auto;
     width: 100%;
     max-width: 81rem;
@@ -244,7 +207,6 @@ body {
 }
 
 .header .container1 .container2 .leftcontainer h1 {
-    /* font: 700 3.75rem/1.1 var(--font1); */
     font: 700 3rem/1.1 var(--font1);
     margin: 3rem 0rem 1.5rem;
 }
@@ -272,6 +234,7 @@ body {
     font: 600 1.25rem/1 var(--font3);
     color: var(--color0);
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 1px;
     display: flex;
     justify-content: center;
@@ -285,7 +248,6 @@ body {
 
 .header .container1 .container2 .leftcontainer .button a:hover {
     box-shadow: 0 4px 25px 0 var(--color3);
-    color: var(--color0);
 }
 
 .header .container1 .container2 .leftcontainer .button .kiwifylogo {
@@ -443,7 +405,7 @@ body {
 }
 
 .figmaisbetter .container3 .container4 .images img {
-    width: 100%;
+    width: auto;
     max-width: 19.625rem;
     max-height: 24.53125rem;
     animation: scrollimages 25s linear infinite;
@@ -557,6 +519,7 @@ body {
     font: 600 1.125rem/1 var(--font3);
     color: var(--color0);
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 0px;
     display: flex;
     justify-content: center;
@@ -570,7 +533,6 @@ body {
 
 .leaveps .container5 .container6 .rightcontainer .button a:hover {
     box-shadow: 0 4px 25px 0 var(--color3);
-    color: var(--color0);
 }
 
 .leaveps .container5 .container6 .rightcontainer .button .kiwifylogo {
@@ -633,7 +595,7 @@ body {
     left: 1.35rem;
     border-style: none none none solid;
     border-width: 1px;
-    border-color: #000 #000 #000 #8b8b8b;
+    border-color: var(--color0) var(--color0) var(--color0) var(--color8);
     overflow: hidden;
 }
 
@@ -1177,6 +1139,7 @@ body {
     font: 600 1.125rem/1 var(--font3);
     color: var(--color1);
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 0px;
     display: flex;
     justify-content: center;
@@ -1208,8 +1171,8 @@ body {
     align-items: center;
     padding: 3.5rem 2rem 4.625rem;
     width: 100%;
-    background: linear-gradient(320deg, #000, #393939) padding-box,
-        linear-gradient(155deg, #d5ff40, transparent 60%) border-box;
+    background: linear-gradient(320deg, var(--color0), var(--color9)) padding-box,
+        linear-gradient(155deg, var(--color3), transparent 60%) border-box;
     border-radius: 0.625rem;
     border: 1px solid transparent;
 }
@@ -1271,6 +1234,7 @@ body {
     font: 600 1.125rem/1 var(--font3);
     color: var(--color0);
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 0px;
     display: flex;
     justify-content: center;
@@ -1298,6 +1262,8 @@ body {
 
 .price .container21 .container22 img.payments {
     display: block;
+    width: 100%;
+    max-width: 25rem;
     margin: 4rem auto 0rem;
 }
 
@@ -1539,7 +1505,6 @@ footer a:hover {
 }
 
 @media (max-width: 991px) {
-
     .header .container1 {
         padding: 3rem 2.5rem 0rem;
     }
@@ -1754,9 +1719,7 @@ footer a:hover {
     }
 }
 
-/*Thiago do Header de 479px para baixo em media query de 680px*/
 @media (max-width: 767px) {
-
     .header .container1 {
         padding: 3rem 1.25rem 0rem;
     }
@@ -1774,16 +1737,13 @@ footer a:hover {
         margin-top: 1.5rem;
     }
 
-
     .header .container1 .container2 .rightcontainer .firstelement {
         left: 4rem;
-        /* top: 21.8rem; */
         top: 18.3rem;
         width: 9rem;
     }
 
     .header .container1 .container2 .rightcontainer .secondelement {
-        /* top: 14.6rem; */
         top: 11.6rem;
         right: 4rem;
         width: 9rem;
@@ -1971,14 +1931,33 @@ footer a:hover {
 
     .price .container21 .container22 h2 {
         font: 700 2rem/1.2 var(--font1);
+        padding: 0rem 1.25rem;
     }
 
     .price .container21 .container22 p {
         margin: 0.625rem auto 2rem;
+        padding: 0rem 1.25rem;
     }
 
     .price .container21 .container22 .pricecontainers {
         padding: 0rem 1.25rem;
+    }
+
+    .price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.firstp,
+    .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.firstp {
+        font: 400 1.063rem/1.4 var(--font8);
+        padding: 0rem;
+    }
+
+    .price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.firstp span,
+    .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.firstp span {
+        font: 900 1.063rem/1.4 var(--font11);
+    }
+
+    .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.thirdp,
+    .price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.thirdp {
+        font: 400 1.063rem/1.4 var(--font8);
+        padding: 0rem;
     }
 
     .price .container21 .container22 img.payments {
@@ -1993,8 +1972,11 @@ footer a:hover {
         padding: 5rem 1.25rem 0rem;
     }
 
+    .guaranty .container23 .container24 .rightcontainer .toolcontainer {
+        margin-bottom: 1.25rem;
+    }
+
     .guaranty .container23 .container24 .leftcontainer img.guarantyseven {
-        /* width: 17rem; */
         width: 50%;
     }
 
@@ -2008,7 +1990,6 @@ footer a:hover {
     .about .container25 {
         padding: 3.75rem 1.25rem 0rem;
     }
-
 
     .about .container25 .container26 {
         padding-left: 0rem;
@@ -2041,6 +2022,35 @@ footer a:hover {
     }
 }
 
+@media(max-width: 667px) {
+    .header .container1 .container2 .rightcontainer .firstelement {
+        left: 0.6rem;
+        top: 22rem;
+        bottom: 29px;
+        width: 30%;
+        max-width: 10.5rem;
+    }
+
+    .header .container1 .container2 .rightcontainer .secondelement {
+        top: 24rem;
+        right: 0.4rem;
+        bottom: 382px;
+        width: 30%;
+        max-width: 11.5625rem;
+    }
+
+    .header .container1 .container2 .rightcontainer .herothiagomobile {
+        left: -1.9rem;
+        top: -45px;
+        width: 110%;
+        max-width: 40rem;
+    }
+
+    .wordsmoving {
+        margin-top: -3.3rem;
+    }
+}
+
 @media(max-width: 539px) {
     footer {
         font-size: 10px;
@@ -2048,5 +2058,161 @@ footer a:hover {
 }
 
 @media(max-width: 479px) {
-    /*Fazer essa inteira hoje!*/
+    .header .container1 .container2 .rightcontainer .firstelement {
+        top: 15.2rem;
+    }
+
+    .header .container1 .container2 .rightcontainer .secondelement {
+        top: 17.1rem;
+    }
+
+    .figmaisbetter .container3 h2 {
+        font: 700 3rem/1.2 var(--font1);
+        flex-direction: column;
+    }
+
+    .leaveps .container5 .container6 .leftcontainer {
+        row-gap: 2rem;
+    }
+
+    .public .container7 .container8 h2 {
+        font: 700 3rem/1.2 var(--font1);
+    }
+
+    .learn .container9 .container10 .leftcontainer .light {
+        left: -6.2rem;
+        top: -4.2rem;
+        width: 160%;
+    }
+
+    .learn .container9 .container10 .rightcontainer h2 {
+        font: 700 2rem/1.2 var(--font1);
+    }
+
+    .modules .container11 .container12 h2 {
+        font: 700 2rem/1.2 var(--font1);
+    }
+
+    .modules .container11 .container12 .images img {
+        width: 60vw;
+    }
+
+    .figmaispro .container13 .container14 {
+        row-gap: 3rem;
+    }
+
+    .figmaispro .container13 .container14 .leftcontainer h2 {
+        font: 700 3rem/1.2 var(--font1);
+    }
+
+    .figmaispro .container13 .container14 .leftcontainer img {
+        left: -1.1rem;
+        bottom: 6.9rem;
+        width: 40%;
+    }
+
+    .figmaispro .container13 .container14 img.thiagobgmobile {
+        width: 105%;
+        max-width: 34.875rem;
+    }
+
+    .welcometofigmaispro .container15 .container16 h2 {
+        font: 700 2rem/1.2 var(--font1);
+    }
+
+    .welcometofigmaispro .container15 .container16 img.logo {
+        max-width: 80%;
+        padding: 0rem 1.25rem;
+    }
+
+    @keyframes scrollwelcometo {
+        0% {
+            transform: translateX(-8460px);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    .welcometofigmaispro .container15 .container16 .images img {
+        width: 60vw;
+        animation: scrollwelcometo 90s linear infinite;
+    }
+
+    .webflowelementor .container17 .container18 .content p {
+        width: 90%;
+    }
+
+    .comments .container19 .container20 h2 {
+        font: 700 2rem/1.2 var(--font1);
+        margin: 0rem auto 2rem;
+        width: 90%;
+    }
+
+    /*Seção slides no HTML e nessa media query do CSS*/
+
+    .price .container21 .container22 h2 {
+        width: 90%;
+    }
+
+    .price .container21 .container22 .pricecontainers {
+        flex-direction: column-reverse;
+    }
+
+    .price .container21 .container22 .pricecontainers .leftcontainer,
+    .price .container21 .container22 .pricecontainers .rightcontainer {
+        padding: 2rem 1rem;
+    }
+
+    .price .container21 .container22 .pricecontainers .leftcontainer ul,
+    .price .container21 .container22 .pricecontainers .rightcontainer ul {
+        margin: 1.5rem auto;
+    }
+
+    .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.secondp,
+    .price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.secondp {
+        font: 800 2rem/1 var(--font10);
+    }
+
+    .price .container21 .container22 .pricecontainers .leftcontainer .pricevalue p.secondp span,
+    .price .container21 .container22 .pricecontainers .rightcontainer .pricevalue p.secondp span {
+        font: 800 4rem/1 var(--font10);
+    }
+
+    .price .container21 .container22 img.payments {
+        padding: 0rem 1.25rem;
+    }
+
+    .guaranty .container23 .container24 .leftcontainer img.guarantylight {
+        display: none;
+    }
+
+    .guaranty .container23 .container24 .leftcontainer img.guarantyseven {
+        width: 80%;
+    }
+
+    .guaranty .container23 .container24 .rightcontainer .toolcontainer img.figmatool {
+        width: 40vw;
+    }
+
+    .about .container25 .container26 img.thiagomedeiros {
+        width: 100%;
+    }
+
+    .about .greenbg {
+        left: auto;
+        top: auto;
+        right: -4.9rem;
+        bottom: -2.8rem;
+    }
+
+    .faq .container27 .container28 a.button {
+        font: 600 1rem/1.1 var(--font3);
+        padding: 1.25rem 2rem;
+    }
+
+    .faq .container27 .container28 a.button img.whatsimg {
+        width: 1.8rem;
+    }
 }
