@@ -114,13 +114,11 @@ li {
 
 body {
     width: 100%;
-    /* max-width: 1440px; */
     margin: auto;
     background-color: var(--color2);
     color: var(--color1);
     font-size: 1.125rem;
     line-height: 1.4;
-    /* font-weight: 400; */
 }
 
 @keyframes bgloader {
@@ -963,6 +961,10 @@ body {
     width: 100%;
     max-width: 41.6875rem;
     margin: 0rem auto 4rem;
+}
+
+.comments .container19 .container20mobile {
+    display: none;
 }
 
 .comments .container19 .container20 .slides {
@@ -2144,13 +2146,110 @@ footer a:hover {
         width: 90%;
     }
 
-    .comments .container19 .container20 h2 {
+    .comments .container19 .container20 {
+        display: none;
+    }
+
+    .comments .container19 .container20mobile {
+        display: block;
+        overflow: hidden;
+    }
+
+    .comments .container19 .container20mobile h2 {
         font: 700 2rem/1.2 var(--font1);
         margin: 0rem auto 2rem;
         width: 90%;
     }
 
     /*Seção slides no HTML e nessa media query do CSS*/
+
+    .comments .container19 .container20mobile .slides {
+        margin: auto;
+        display: flex;
+    }
+
+    .comments .container19 .container20mobile .slides .slidesgroup {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .comments .container19 .container20mobile .slides .slidesgroup .slide {
+        width: max-content;
+        margin: 0rem 1rem 2rem;
+    }
+
+    .comments .container19 .container20mobile .slides .slidesgroup .slide .content {
+        display: flex;
+        width: 100%;
+    }
+
+    .comments .container19 .container20mobile .slides .slidesgroup .slide .content img.person {
+        width: 3.75rem;
+    }
+
+    .comments .container19 .container20mobile .slides .slidesgroup .slide .content .headerandstars {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.25rem 0rem;
+        margin-left: 0.9375rem;
+    }
+
+    .comments .container19 .container20mobile .slides .slidesgroup .slide .content .headerandstars h3 {
+        font: 600 1rem/1 var(--font3);
+        width: 100%;
+    }
+
+    .comments .container19 .container20mobile .slides .slidesgroup .slide .content .headerandstars img.stars {
+        width: 100%;
+        max-width: 8rem;
+    }
+
+    .comments .container19 .container20mobile .slides .slidesgroup .slide p {
+        font: 300 0.875rem/1.5 var(--font7);
+        width: 100%;
+        max-width: 28.375rem;
+        margin-top: 1.5rem;
+    }
+
+    .comments .container19 .container20mobile .slidenavigation {
+        width: 156px;
+        height: 40px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .comments .container19 .container20mobile .slidenavigation span {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+        background-color: var(--color1);
+        transition: width 0.2s, background-color 0.2s;
+        transition-timing-function: linear;
+        margin: 0px 3px;
+        cursor: pointer;
+    }
+
+    .comments .container19 .container20mobile .slidenavigation span.active {
+        width: 24px;
+        background-color: var(--color4);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .price .container21 .container22 h2 {
         width: 90%;

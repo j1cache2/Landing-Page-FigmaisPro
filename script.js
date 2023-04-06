@@ -9,19 +9,15 @@ spans.forEach(span => {
         });
         span.classList.add('active');
         clearInterval(slideInterval);
+        clearInterval(slideIntervalMobile);
     });
 });
-
-// function allFunctions() {
-//     transformSlide();
-//     changeBtn();
-// }
 
 let counterSlide;
 let idOnClick;
 let result;
 let slide;
-let selectedSlide;;
+let selectedSlide;
 
 function transformSlide(_number) {
     let counterSlide = 1;
@@ -52,7 +48,7 @@ function transformSlideAuto() {
     } else {
         resultConst = 0;
     };
-    let slide = Array.from(document.querySelectorAll(".slidesgroup"));
+    let slide = Array.from(document.querySelectorAll(".container20 .slidesgroup"));
     slide.forEach(selectedSlide => {
         selectedSlide.style.transform = 'translateX(' + (-100 * resultConst) + '%';
         selectedSlide.style.transition = "transform 1s ease";
@@ -63,13 +59,46 @@ let currentIndex = 0;
 let newIndex = 0;
 
 function transformSpanAuto() {
-    let autoSpan = Array.from(document.querySelectorAll(".slidenavigation span"));
+    let autoSpan = Array.from(document.querySelectorAll(".container20 .slidenavigation span"));
     let currentIndex = autoSpan.findIndex(span => span.classList.contains('active'));
     autoSpan[currentIndex].classList.remove('active');
     newIndex = (currentIndex + 1) % autoSpan.length;
     autoSpan[newIndex].classList.add('active');
-
 };
+
+
+const slideIntervalMobile = setInterval(slideAutoMobile, 3000);
+
+function slideAutoMobile() {
+    transformSlideAutoMobile();
+    transformSpanAutoMobile();
+}
+
+let resultConstMobile = 0;
+let currentIndexMobile = 0;
+let newIndexMobile = 0;
+
+function transformSlideAutoMobile() {
+    if (resultConstMobile <= 8) {
+        resultConstMobile++
+    } else {
+        resultConstMobile = 0;
+    };
+    let slide = Array.from(document.querySelectorAll(".container20mobile .slidesgroup"));
+    slide.forEach(selectedSlide => {
+        selectedSlide.style.transform = 'translateX(' + (-100 * resultConstMobile) + '%';
+        selectedSlide.style.transition = "transform 1s ease";
+    });
+}
+
+function transformSpanAutoMobile() {
+    let autoSpan = Array.from(document.querySelectorAll(".container20mobile .slidenavigation span"));
+    let currentIndexMobile = autoSpan.findIndex(span => span.classList.contains('active'));
+    autoSpan[currentIndexMobile].classList.remove('active');
+    newIndexMobile = (currentIndexMobile + 1) % autoSpan.length;
+    autoSpan[newIndexMobile].classList.add('active');
+};
+
 
 //A função abaixo já funciona, porém deve ser ajustada a fim de funcionar para diferentes tamanhos de tela. Nesse caso, devemos pegar a altura da <section>> ao invés da quantidade px rolada.
 
