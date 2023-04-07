@@ -99,6 +99,63 @@ function transformSpanAutoMobile() {
     autoSpan[newIndexMobile].classList.add('active');
 };
 
+let slidesMobile = document.getElementById("slidescontainermobile");
+
+slidesMobile.addEventListener("touchstart", touchStartHandler, false);
+slidesMobile.addEventListener("touchend", touchEndHandler, false);
+
+
+let touchesInAction = [];
+let theTouchInfo;
+
+
+function touchStartHandler(event) {
+    var touches = event.changedTouches;
+
+    for (var j = 0; j < touches.length; j++) {
+        touchesInAction["$" + touches[j].identifier] = {
+            identifier: touches[j].identifier,
+            pageX: touches[j].pageX,
+        };
+    }
+}
+
+let resultConstMobileTouch = 0;
+
+function touchEndHandler(event) {
+    let touches = event.changedTouches;
+
+    for (var j = 0; j < touches.length; j++) {
+        /* access stored touch info on touchend */
+        var theTouchInfo = touchesInAction["$" + touches[j].identifier];
+        theTouchInfo.dx = touches[j].pageX - theTouchInfo.pageX;  /* x-distance moved since touchstart */
+        // event.preventDefault();
+    }
+    if (theTouchInfo.dx <= 0) {
+        resultConstMobileTouch++;
+    } else {
+        resultConstMobileTouch--;
+    };
+    let slide = Array.from(document.querySelectorAll(".container20mobile .slidesgroup"));
+    slide.forEach(selectedSlide => {
+        selectedSlide.style.transform = 'translateX(' + (-100 * resultConstMobileTouch) + '%';
+        selectedSlide.style.transition = "transform 1s ease";
+    });
+    if (resultConstMobileTouch > 9) {
+        let allSlidesMobile = Array.from(document.querySelectorAll(".container20mobile .slidesgroup"));
+        allSlidesMobile.forEach(slide => {
+            slide.style.transform = 'translateX(' + (0) + '%';
+            slide.style.transition = "transform 1s ease";
+        });
+    } if (resultConstMobileTouch < 0) {
+        let allSlidesMobile = Array.from(document.querySelectorAll(".container20mobile .slidesgroup"));
+        allSlidesMobile.forEach(slide => {
+            slide.style.transform = 'translateX(' + (-900) + '%';
+            slide.style.transition = "transform 1s ease";
+        });
+    }
+}
+
 
 //A função abaixo já funciona, porém deve ser ajustada a fim de funcionar para diferentes tamanhos de tela. Nesse caso, devemos pegar a altura da <section>> ao invés da quantidade px rolada.
 
