@@ -1,5 +1,6 @@
 "use strict";
 
+// let resultConstMobileTouch = 0;
 let spans = document.querySelectorAll(".slidenavigation span");
 
 spans.forEach(span => {
@@ -12,6 +13,14 @@ spans.forEach(span => {
         clearInterval(slideIntervalMobile);
     });
 });
+// function spanActive() {
+//     // if (resultConstMobileTouch >= 0 && resultConstMobileTouch <= 9) {
+//     let autoSpan = Array.from(document.querySelectorAll(".slidenavigation span"));
+//     let currentIndexMobile = autoSpan.findIndex(span => span.classList.contains('active'));
+//     // autoSpan[currentIndexMobile].classList.remove('active');
+//     // autoSpan[resultConstMobileTouch].classList.add('active');
+//     let resultConstMobileTouch = currentIndexMobile;
+// };
 
 let counterSlide;
 let idOnClick;
@@ -23,7 +32,6 @@ function transformSlide(_number) {
     let counterSlide = 1;
     let idOnClick = _number;
     let result = idOnClick - counterSlide;
-
     if (result >= 0) {
         let slide = Array.from(document.querySelectorAll(".slidesgroup"));
         slide.forEach(selectedSlide => {
@@ -66,6 +74,7 @@ function transformSpanAuto() {
     autoSpan[newIndex].classList.add('active');
 };
 
+let resultConstMobileTouch = 0;
 
 const slideIntervalMobile = setInterval(slideAutoMobile, 3000);
 
@@ -81,8 +90,10 @@ let newIndexMobile = 0;
 function transformSlideAutoMobile() {
     if (resultConstMobile <= 8) {
         resultConstMobile++
+        resultConstMobileTouch++;
     } else {
         resultConstMobile = 0;
+        resultConstMobileTouch = 0;
     };
     let slide = Array.from(document.querySelectorAll(".container20mobile .slidesgroup"));
     slide.forEach(selectedSlide => {
@@ -100,14 +111,11 @@ function transformSpanAutoMobile() {
 };
 
 let slidesMobile = document.getElementById("slidescontainermobile");
-
 slidesMobile.addEventListener("touchstart", touchStartHandler, false);
 slidesMobile.addEventListener("touchend", touchEndHandler, false);
 
-
 let touchesInAction = [];
 let theTouchInfo;
-
 
 function touchStartHandler(event) {
     var touches = event.changedTouches;
@@ -120,8 +128,6 @@ function touchStartHandler(event) {
     }
 }
 
-let resultConstMobileTouch = 0;
-
 function touchEndHandler(event) {
     let touches = event.changedTouches;
 
@@ -129,7 +135,8 @@ function touchEndHandler(event) {
         /* access stored touch info on touchend */
         var theTouchInfo = touchesInAction["$" + touches[j].identifier];
         theTouchInfo.dx = touches[j].pageX - theTouchInfo.pageX;  /* x-distance moved since touchstart */
-        // event.preventDefault();
+        event.preventDefault();
+        // console.log(theTouchInfo.dx);
     }
     if (theTouchInfo.dx <= 0) {
         resultConstMobileTouch++;
@@ -140,20 +147,35 @@ function touchEndHandler(event) {
     slide.forEach(selectedSlide => {
         selectedSlide.style.transform = 'translateX(' + (-100 * resultConstMobileTouch) + '%';
         selectedSlide.style.transition = "transform 1s ease";
+        clearInterval(slideIntervalMobile);
     });
     if (resultConstMobileTouch > 9) {
         let allSlidesMobile = Array.from(document.querySelectorAll(".container20mobile .slidesgroup"));
         allSlidesMobile.forEach(slide => {
             slide.style.transform = 'translateX(' + (0) + '%';
             slide.style.transition = "transform 1s ease";
+            resultConstMobileTouch = 0;
         });
     } if (resultConstMobileTouch < 0) {
         let allSlidesMobile = Array.from(document.querySelectorAll(".container20mobile .slidesgroup"));
         allSlidesMobile.forEach(slide => {
             slide.style.transform = 'translateX(' + (-900) + '%';
             slide.style.transition = "transform 1s ease";
+            resultConstMobileTouch = 9;
         });
     }
+    if (resultConstMobileTouch >= 0 && resultConstMobileTouch <= 9) {
+        let autoSpan = Array.from(document.querySelectorAll(".container20mobile .slidenavigation span"));
+        let currentIndexMobile = autoSpan.findIndex(span => span.classList.contains('active'));
+        autoSpan[currentIndexMobile].classList.remove('active');
+        autoSpan[resultConstMobileTouch].classList.add('active');
+    };
+    console.log(resultConstMobileTouch);
+
+    // let autoSpan = Array.from(document.querySelectorAll(".container20mobile .slidenavigation span"));
+    // let currentIndexMobile = autoSpan.findIndex(span => span.classList.contains('active'));
+    // let resultConstMobileTouch = currentIndexMobile;
+    // console.log(resultConstMobileTouch);
 }
 
 
@@ -272,11 +294,9 @@ window.addEventListener("scroll", function (event) {
     let end = start + 400;
     let sectionHeight = end - start;
 
-
     let animationOne = top - start;
     let webflowLogoImg = document.querySelector('.webflowlogo');
     let webflowLogoImgValueToMove = 4 / sectionHeight;
-
 
     let secondStart = start + 100;
     let secondEnd = start + 300;
@@ -284,26 +304,10 @@ window.addEventListener("scroll", function (event) {
     let elementorlogoImg = document.querySelector('.elementorlogo')
     let elementorlogoImgValueToMove = 4 / sectionHeight;
 
-
     let thirdStart = start + 200;
     let animationThree = top - thirdStart;
     let animateP = document.querySelector('.animatep')
     let animatePValueToMove = 4 / sectionHeight;
-
-    // if (top >= start && top <= thirdStart) {
-    //     webflowLogoImg.style.transform = 'translateY(' + (-animationOne * webflowLogoImgValueToMove) + 'rem';
-    //     webflowLogoImg.style.opacity = (animationOne * webflowLogoImgValueToMove);
-    // };
-
-    // if (top >= secondStart && top <= secondEnd) {
-    //     elementorlogoImg.style.transform = 'translateY(' + (-animationTwo * elementorlogoImgValueToMove) + 'rem';
-    //     elementorlogoImg.style.opacity = (animationTwo * elementorlogoImgValueToMove);
-    // };
-
-    // if (top >= thirdStart && top <= end) {
-    //     animateP.style.transform = 'translateY(' + (-animationThree * animatePValueToMove) + 'rem';
-    //     animateP.style.opacity = (animationThree * animatePValueToMove);
-    // };
 
     if (top <= start) {
         webflowLogoImg.style.opacity = 0;

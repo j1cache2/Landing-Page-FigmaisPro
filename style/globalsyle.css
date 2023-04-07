@@ -2309,6 +2309,7 @@ footer a:hover {
     .faq .container27 .container28 a.button {
         font: 600 1rem/1.1 var(--font3);
         padding: 1.25rem 2rem;
+        text-align: center;
     }
 
     .faq .container27 .container28 a.button img.whatsimg {
